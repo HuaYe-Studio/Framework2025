@@ -1,13 +1,15 @@
-namespace SkillSystem.Config
+﻿namespace SkillSystem.Config
 {
     public static class LogicFrameConfig
     {
-        public static int LogicFrameid;
+        //自增
+        public static long LogicFrameid;
         
         //一秒15帧
         public static float LogicFrameInterval = 0.066f;
         
-        //毫秒逻辑帧
-        public static float LogicFrameIntervalMS = 66f;
+        //毫秒15帧
+        public static float LogicFrameIntervalms = 66f;
+
     }
 }
