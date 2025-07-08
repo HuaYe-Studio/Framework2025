@@ -1,3 +1,4 @@
+using System;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using SkillSystem.Config;
@@ -16,6 +17,27 @@ namespace SkillSystem.EditorWindow
         
         [TabGroup("Skill" , "模型动画数据" , SdfIconType.PersonFill , TextColor = "orange")]
         public SkillCharacterConfig CharacterConfig = new SkillCharacterConfig();
-        
+
+        protected override void OnEnable()
+        {
+            EditorApplication.update += OnUpdate;
+        }
+
+        protected override void OnDisable()
+        {
+            EditorApplication.update -= OnUpdate;
+        }
+
+        public void OnUpdate()
+        {
+            try
+            {
+                CharacterConfig.OnUpdate(() => Focus());
+            }
+            catch (Exception e)
+            {
+                
+            }
+        }
     }
 }
