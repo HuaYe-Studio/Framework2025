@@ -6,16 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Agent/ParticleAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Agent/ParticleAgent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillClip.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Test.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Test/TryPlayInEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Test/TryPlayInEditor.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +106,8 @@
       <workItem from="1751901909880" duration="506000" />
       <workItem from="1751950039394" duration="3181000" />
       <workItem from="1751953491033" duration="2942000" />
-      <workItem from="1751987666482" duration="2464000" />
+      <workItem from="1751987666482" duration="2878000" />
+      <workItem from="1752162444854" duration="1152000" />
     </task>
     <servers />
   </component>

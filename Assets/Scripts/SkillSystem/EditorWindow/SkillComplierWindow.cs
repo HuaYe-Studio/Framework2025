@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using SkillSystem.Config;
@@ -14,9 +15,14 @@ public class SkillComplierWindow : OdinEditorWindow
     
     [TabGroup("SkillComplier" , " Skill" , SdfIconType.Robot , TextColor = "lightmagenta")]
     public SkillConfig SkillConfig = new SkillConfig();
-
+    
+    [TabGroup("SkillComplier", " Damage", SdfIconType.At, TextColor = "lightred")]
+    public List<SkillDamageConfig> SkillDamageConfig = new List<SkillDamageConfig>();
+    
     [TabGroup("SkillComplier", " Effect", SdfIconType.OpticalAudio, TextColor = "blue")]
     public List<EffectConfig> EffectConfig = new List<EffectConfig>();
+    
+    
     
     
 #if UNITY_EDITOR
@@ -33,14 +39,31 @@ public class SkillComplierWindow : OdinEditorWindow
         return GetWindow<SkillComplierWindow>();
     }
 
+    public void LoadSkillData(SkillDataConfig data)
+    {
+        
+        this.CharacterConfig = SkillDataConfig.CreateCopy(data.CharacterConfig);
+        this.SkillConfig = SkillDataConfig.CreateCopy(data.SkillConfig);
+        this.SkillDamageConfig = data.DamageConfigs.Select(SkillDataConfig.CreateCopy).ToList();
+        this.EffectConfig = data.EffectConfigs.Select(SkillDataConfig.CreateCopy).ToList();
+    }
+
+    public void SaveConfig()
+    {
+        SkillDataConfig.SaveData(CharacterConfig, SkillConfig, SkillDamageConfig, EffectConfig);
+        
+    }
+
     protected override void OnEnable()
     {
         EditorApplication.update += OnEditorUpdate;
+        SkillDamageConfig.ForEach(x => x.OnInit());
     }
 
     protected override void OnDisable()
     {
         EditorApplication.update -= OnEditorUpdate;
+        SkillDamageConfig.ForEach(x => x.OnRelease());
     }
 
     public void OnEditorUpdate()
@@ -77,20 +100,22 @@ public class SkillComplierWindow : OdinEditorWindow
 
         while (_accLogicFrameTime > _nextLogicFrameTime)
         {
-            OnNextLogicFrameHandle();
+            OnLogicFrameHandle();
 
             _nextLogicFrameTime += LogicFrameConfig.LogicFrameInterval;
         }
     }
 
-    public void OnNextLogicFrameHandle()
+    public void OnLogicFrameHandle()
     {
         EffectConfig.ForEach(x => x.OnLogicFrameUpdate());
+        SkillDamageConfig.ForEach(x => x.UpdateLogic());
     }
 
     public void StartPlaySkill()
     {
         EffectConfig.ForEach(x => x.StartPlaySkill());
+        SkillDamageConfig.ForEach(x => x.StartPlaySkill());
         _isStartPlaySkill = true;
         _accLogicFrameTime = 0;
         _nextLogicFrameTime = 0;
@@ -100,6 +125,7 @@ public class SkillComplierWindow : OdinEditorWindow
     public void PlaySkillEnd()
     {
         EffectConfig.ForEach(x => x.PlaySkillEnd());
+        SkillDamageConfig.ForEach(x => x.PlaySkillEnd());
         _isStartPlaySkill = false;
         _accLogicFrameTime = 0;
         _nextLogicFrameTime = 0;
@@ -109,6 +135,7 @@ public class SkillComplierWindow : OdinEditorWindow
     public void PlayPause()
     {
         EffectConfig.ForEach(x => x.SkillPlayPause());
+        SkillDamageConfig.ForEach(x => x.PlaySkillEnd());
     }
 
     public static Vector3 GetCharacterPosition()
