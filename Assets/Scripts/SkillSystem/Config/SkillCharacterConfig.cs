@@ -70,11 +70,10 @@ namespace SkillSystem.Config
                     //说明是资源 克隆一个到场景中
                     tempCharacter = GameObject.Instantiate(SkillCharacter);
                 }
-            
-               
+                
             
                 AnimLength = IsLoopAnim ? AnimationClip.length * LoopCount : AnimationClip.length;
-                LogicFrame = (int)(IsLoopAnim ? AnimationClip.length / LogicFrameConfig.LogicFrameInterval * LoopCount : AnimationClip.length / LogicFrameConfig.LogicFrameInterval);
+                LogicFrame = (int)(IsLoopAnim ? AnimationClip.length / 0.066f * LoopCount : AnimationClip.length / 0.066f);
                 AnimDuration = IsLoopAnim ? AnimationClip.length * 1000 * LoopCount : AnimationClip.length * 1000;
                 _lastRuntime = 0;
                 //开始播放动画
@@ -98,7 +97,7 @@ namespace SkillSystem.Config
         [Button("保存数据" , ButtonSizes.Large)]
         public void SaveAssets()
         {
-        
+            SkillComplierWindow.GetWindow()?.SaveConfig();
         }
 
         public void OnUpdate(Action callback = null)

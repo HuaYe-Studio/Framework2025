@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6848c9eff2ef46849c245c231e8dd374, type: 3}
+  m_Name: 1001
+  m_EditorClassIdentifier: 
+  CharacterConfig:
+    SkillCharacter: {fileID: 0}
+    AnimationClip: {fileID: 7400000, guid: bb56ca73104d25246bac3fb457a918cb, type: 2}
+    animProgess: 100
+    IsLoopAnim: 0
+    LoopCount: 0
+    LogicFrame: 16
+    AnimLength: 1.1
+    AnimDuration: 1100
+  SkillConfig:
+    SkillIcon: {fileID: 0}
+    SkillId: 1019
+    SkillName: 
+    SkillManaCost: 100
+    SkillShakeBeforeTimeMS: 0
+    SkillDurationMS: 0
+    SkillShakeAfterTimeMS: 0
+    SkillCooldownMS: 0
+    SkillType: 1
+    StockPileStageData: []
+    SkillGuideEffect: {fileID: 0}
+    SkillGuideRange: 0
+    NextSkillId: 0
+    SkillHitEffect: {fileID: 0}
+    SkillHitEffectDurationMS: 0
+    SkillHitSound: {fileID: 0}
+    ShowSkillPortrait: 0
+    SkillPortrait: {fileID: 0}
+    SkillDescription: 
+  DamageConfigs: []
+  EffectConfigs: []

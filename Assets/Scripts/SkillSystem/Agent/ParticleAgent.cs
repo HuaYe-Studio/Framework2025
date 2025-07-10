@@ -14,7 +14,6 @@ namespace SkillSystem.Agent
     
         public void InitPlayAnim(Transform trans)
         {
-
             _particleSystems = trans.GetComponentsInChildren<ParticleSystem>();
             EditorApplication.update += Onupdate;
         }
@@ -37,7 +36,6 @@ namespace SkillSystem.Agent
             {
                 _particleSystems.ForEach(x =>
                 {
-                    Debug.Log(_particleSystems.Length);
                     if (x != null)
                     {
                         //停止所有粒子动效
@@ -50,8 +48,6 @@ namespace SkillSystem.Agent
                     
                     
                 });
-                
-
             }
         }
     
