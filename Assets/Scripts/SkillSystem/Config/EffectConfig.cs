@@ -34,7 +34,8 @@ namespace SkillSystem.Config
         public TransParentType TransParentType;
 
 
-
+        // 特效缓存
+        public GameObject GameEffectCache;
 
 
 #if UNITY_EDITOR
