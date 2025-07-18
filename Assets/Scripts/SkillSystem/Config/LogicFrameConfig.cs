@@ -9,7 +9,7 @@
         public static float LogicFrameInterval = 0.066f;
         
         //毫秒15帧
-        public static float LogicFrameIntervalms = 66f;
+        public static int LogicFrameIntervalms = 66;
 
     }
 }

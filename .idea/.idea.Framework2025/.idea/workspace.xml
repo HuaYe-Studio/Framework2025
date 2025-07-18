@@ -6,13 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Agent/ParticleAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Agent/ParticleAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillClip.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Test.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Test/TryPlayInEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Test/TryPlayInEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/GhostSamurai_APose_Idle.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/GhostSamurai_APose_Idle.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/FixPhysicMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/FixPhysicMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/LogicRandom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/LogicRandom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/EffectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/EffectConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +26,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Test/TryPlayInEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/Main.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/PlayerCombatControl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -41,6 +45,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feat/skillsystem&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -108,6 +113,9 @@
       <workItem from="1751953491033" duration="2942000" />
       <workItem from="1751987666482" duration="2878000" />
       <workItem from="1752162444854" duration="1152000" />
+      <workItem from="1752506769082" duration="39000" />
+      <workItem from="1752506815534" duration="353000" />
+      <workItem from="1752836900723" duration="6222000" />
     </task>
     <servers />
   </component>
