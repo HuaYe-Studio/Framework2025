@@ -1,5 +1,4 @@
 using System;
-using FixIntPhysics;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -32,39 +31,12 @@ namespace SkillSystem.Config
         [LabelText("伤害倍率")]
         public int DamageRate;
 
-        [LabelText("检测模式")]
-        [OnValueChanged("OnDectionValueChange")]
-        public DamageDetectionMode DamageDetectionMode;
         
-        [LabelText("Box碰撞盒大小")]
-        [ShowIf("_showBox3D")]
-        [OnValueChanged("OnBoxSizeValueChange")]
-        public Vector3 BoxSize = new Vector3(1, 1, 1);
-        
-        [LabelText("Box碰撞盒偏移")]
-        [ShowIf("_showBox3D")]
-        [OnValueChanged("OnOffsetValueChange")]
-        public Vector3 BoxOffset = new Vector3(0, 0, 0);
-        
-        [LabelText("球形碰撞盒偏移")]
-        [ShowIf("_showSphere3D")]
-        [OnValueChanged("OnOffsetValueChange")]
-        public Vector3 SphereOffset = new Vector3(0, 0.9f, 0);
-        
-        [LabelText("球形碰撞盒半径")]
-        [ShowIf("_showSphere3D")]
-        [OnValueChanged("OnSphereSizeValueChange")]
-        public float Radius = 1;
-        
-        [LabelText("球形检测半径高度")]
-        [ShowIf("_showSphere3D")]
-        public float RadiusHeight = 0;
-        
-        [LabelText("检测位置类型")]
-        public ColliderPosType ColliderPosType = ColliderPosType.FollowDic;
         
         [LabelText("目标类型")]
         public TargetType TargetType;
+        
+
         
         [TitleGroup("技能附加Buff" , "伤害生效的瞬间，附加指定的Buff")]
         [LabelText("附加Buff")]
@@ -73,123 +45,14 @@ namespace SkillSystem.Config
         [TitleGroup("触发后续技能" , "造成伤害后且技能释放完毕后，触发指定的技能")]
         [LabelText("触发技能ID")]
         public int TriggerSkillId;
-
+        
 
         
 #if UNITY_EDITOR
         
         
-        private bool _showBox3D;
-        private bool _showSphere3D;
-        
-        //定点数学物理库
-        private FixIntBoxCollider _boxCollider;
-        private FixIntSphereCollider _sphereCollider;
-        
-        private int _curLogicFrame = 0;
-        
 
-
-        private void OnDectionValueChange(DamageDetectionMode mode)
-        {
-            _showBox3D = mode == DamageDetectionMode.Box3D;
-            _showSphere3D = mode == DamageDetectionMode.Sphere3D;
-            CreateCollider();
-        }
-
-        private void CreateCollider()
-        {
-            DestroyCollider();
-            switch (DamageDetectionMode)
-            {
-                case DamageDetectionMode.Box3D:
-                    _boxCollider = new FixIntBoxCollider(BoxSize, SkillComplierWindow.GetCharacterPosition() + BoxOffset);
-                    _boxCollider.SetBoxData(SkillComplierWindow.GetCharacterPosition() + BoxOffset , BoxSize , ColliderPosType == ColliderPosType.FollowPos);
-                    break;
-                case DamageDetectionMode.Sphere3D:
-                    _sphereCollider = new FixIntSphereCollider(Radius , SkillComplierWindow.GetCharacterPosition() + SphereOffset);
-                    _sphereCollider.SetBoxData(Radius , SkillComplierWindow.GetCharacterPosition() + SphereOffset , ColliderPosType == ColliderPosType.FollowPos);
-                    break;
-            }            
-            
-            
-            
-        }
-
-        private void DestroyCollider()
-        {
-            if(_boxCollider != null) _boxCollider.OnRelease();
-            if(_sphereCollider != null) _sphereCollider.OnRelease();
-        }
-
-        public void OnBoxSizeValueChange(Vector3 size)
-        {
-            if (_boxCollider!= null)
-            {
-                _boxCollider.SetBoxData(SkillComplierWindow.GetCharacterPosition() + BoxOffset, size, ColliderPosType == ColliderPosType.FollowPos);
-            }
-        }
-
-        public void OnSphereSizeValueChange(float size)
-        {
-            if (_sphereCollider != null)
-            {
-                _sphereCollider.SetBoxData(size, SkillComplierWindow.GetCharacterPosition() + SphereOffset, ColliderPosType == ColliderPosType.FollowPos);
-            }
-        }
-
-        public void OnOffsetValueChange(Vector3 offset)
-        {
-            switch (DamageDetectionMode)
-            {
-                case DamageDetectionMode.Box3D:
-                    if(_boxCollider == null) return;
-                    _boxCollider.SetBoxData(SkillComplierWindow.GetCharacterPosition() + offset, BoxSize, ColliderPosType == ColliderPosType.FollowPos);
-                    break;
-                case DamageDetectionMode.Sphere3D:
-                    if (_sphereCollider == null) return;
-                    _sphereCollider.SetBoxData(Radius, SkillComplierWindow.GetCharacterPosition() + offset, ColliderPosType == ColliderPosType.FollowPos);
-                    break;
-            }
-        }
-
-        public void OnInit()
-        {
-            CreateCollider();
-        }
-
-        public void OnRelease()
-        {
-            DestroyCollider();
-        }
-
-        public void StartPlaySkill()
-        {
-            _curLogicFrame = 0;
-            DestroyCollider();
-        }
-
-        public void PlaySkillEnd()
-        {
-            DestroyCollider();
-        }
-
-        public void UpdateLogic()
-        {
-
-            if (_curLogicFrame == TriggerLogicFrame)
-            {
-                CreateCollider();
-            }
-            else if (_curLogicFrame == EndLogicFrame)
-            {
-                DestroyCollider();
-            }
-            
-            
-            _curLogicFrame++;
-            
-        }
+       
 
 
         

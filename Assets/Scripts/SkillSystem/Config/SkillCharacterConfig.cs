@@ -19,14 +19,15 @@ namespace SkillSystem.Config
     
         [TitleGroup("技能渲染" , "所有技能渲染数据会在技能释放时触发")]
         [LabelText("技能动画")]
+        [OnValueChanged("OnAnimationClipChanged")]
         public AnimationClip AnimationClip;
 
     
         [BoxGroup("动画数据")]
-        [ProgressBar(0,100,r:0,g:255,b:0,Height = 30)]
+        [ProgressBar(0,"_maxAnimationLength",r:0,g:255,b:0,Height = 30)]
         [HideLabel]
         [OnValueChanged("OnAnimProgressValueChange")]
-        public short animProgess = 0;
+        public int animProgess = 0;
 
         [BoxGroup("动画数据")]
         [LabelText("是否循环动画")]
@@ -53,7 +54,7 @@ namespace SkillSystem.Config
         private GameObject tempCharacter;
         private bool _isPlaying = false;  //是否正在播放动画
         private double _lastRuntime = 0; //上次运行的时间
-    
+        private int _maxAnimationLength;
     
 
         [GUIColor(0.4f,0.8f,1f)]
@@ -114,16 +115,17 @@ namespace SkillSystem.Config
                 double currentTime = EditorApplication.timeSinceStartup - _lastRuntime;
 
                 //动画播放进度
-                float curAniNormalizationValue = (float)currentTime / AnimLength;
-                animProgess = (short)Mathf.Clamp(curAniNormalizationValue * 100 ,0,100);   
+                // float curAniNormalizationValue = (float)currentTime / AnimLength;
+                // animProgess = (short)Mathf.Clamp(curAniNormalizationValue * 100 ,0,100);   
+                animProgess = Mathf.Clamp((int)(currentTime * 1000f) , 0 , _maxAnimationLength);
             
                 //计算逻辑帧
                 LogicFrame = (int)(currentTime / LogicFrameConfig.LogicFrameInterval);
             
                 //动画采样
-                AnimationClip.SampleAnimation(tempCharacter , (float)currentTime);
+                AnimationClip.SampleAnimation(tempCharacter , animProgess / 1000f);
 
-                if (animProgess == 100)
+                if (animProgess == _maxAnimationLength)
                 {
                     //播放完成
                     OnPlayOver();
@@ -141,7 +143,11 @@ namespace SkillSystem.Config
             SkillComplierWindow.GetWindow()?.PlaySkillEnd();
         }
 
-        public void OnAnimProgressValueChange(float value)
+        /// <summary>
+        /// 拖动进度条时触发
+        /// </summary>
+        /// <param name="value"></param>
+        public void OnAnimProgressValueChange(int value)
         {
             if (SkillCharacter != null)
             {
@@ -155,12 +161,23 @@ namespace SkillSystem.Config
 
                 
                 //根据当前进度进行采样
-                float progressValue = (value / 100) * AnimationClip.length;
-                LogicFrame = (int)(progressValue / LogicFrameConfig.LogicFrameInterval);
-                AnimationClip.SampleAnimation(tempCharacter, progressValue);
+                // float progressValue = (value / 100) * AnimationClip.length;
+                // LogicFrame = (int)(progressValue / LogicFrameConfig.LogicFrameInterval);
+                AnimationClip.SampleAnimation(tempCharacter, animProgess / 1000f);
             
-            
+                SkillComplierWindow.GetWindow().OnProgressValueChange(animProgess);
             }
+        }
+
+        public void OnAnimationClipChanged(AnimationClip clip)
+        {
+            if(clip == null) return;
+            _maxAnimationLength = (int)(clip.length * 1000);
+        }
+
+        public void Init()
+        {
+            _maxAnimationLength = (int)(AnimationClip.length * 1000);
         }
 
     }

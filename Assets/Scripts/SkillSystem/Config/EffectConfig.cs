@@ -22,7 +22,12 @@ namespace SkillSystem.Config
         public int EndFrame;
         
         [LabelText("位置偏移")]
+        [OnValueChanged("OnPositionChange")]
         public Vector3 EffectOffset;
+        
+        [LabelText("旋转偏移")]
+        [OnValueChanged("OnRotationChange")]
+        public Vector3 EffectRotate;
         
         [LabelText("特效位置类型")]
         public EffectType EffectType;
@@ -34,9 +39,6 @@ namespace SkillSystem.Config
         public TransParentType TransParentType;
 
 
-        // 特效缓存
-        public GameObject GameEffectCache;
-
 
 #if UNITY_EDITOR
         
@@ -46,12 +48,18 @@ namespace SkillSystem.Config
         
         
         private int _currentLogicFrame = 0;
+        private int _currentTimeMS = 0;
+        private bool _isTrigger = false;
+        private bool _isEnd = false;
 
         public void StartPlaySkill()
         {
             DestroyEffect();
 
             _currentLogicFrame = 0;
+            _currentTimeMS = 0;
+            _isTrigger = false;
+            _isEnd = false;
         }
 
         public void SkillPlayPause()
@@ -64,34 +72,84 @@ namespace SkillSystem.Config
             DestroyEffect();
         }
 
-        public void OnLogicFrameUpdate()
+        // public void OnLogicFrameUpdate()
+        // {
+        //     if (_currentLogicFrame == TriggerFrame)
+        //     {
+        //         CreateEffect();
+        //     }
+        //     else if(_currentLogicFrame == EndFrame)
+        //     {
+        //         DestroyEffect();
+        //     }
+        //     
+        //     
+        //     _currentLogicFrame++;
+        //     
+        // }
+
+        public void OnUpdate(int currentTimeMS)
         {
-            if (_currentLogicFrame == TriggerFrame)
+            _currentTimeMS = currentTimeMS;
+            if (_currentTimeMS >= TriggerFrame && !_isTrigger)
             {
-                CreateEffect();
+                _isTrigger = true;
+                CreateEffect(true);
             }
-            else if(_currentLogicFrame == EndFrame)
+            else if (_currentTimeMS >= EndFrame && !_isEnd)
             {
+                _isEnd = true;
                 DestroyEffect();
             }
-            
-            
-            _currentLogicFrame++;
-            
         }
 
-        public void CreateEffect()
+        public void CreateEffect(bool isPlay)
         {
             if (Effect != null)
             {
                 _cloneEffect = GameObject.Instantiate(Effect);
-                _cloneEffect.transform.position = SkillComplierWindow.GetCharacterPosition();
+                _cloneEffect.transform.position = SkillComplierWindow.GetCharacterPosition() + EffectOffset;
+                _cloneEffect.transform.localRotation = Quaternion.Euler(EffectRotate);
                 //代理释放动画或粒子
                 _animationAgent = new AnimationAgent();
                 _animationAgent.InitPlayAnim(_cloneEffect.transform);
                 
                 _particleAgent = new ParticleAgent();
                 _particleAgent.InitPlayAnim(_cloneEffect.transform);
+                if (isPlay)
+                {
+                    _animationAgent.IsPlaying = true;
+                    _particleAgent.IsPlaying = true;
+                }
+            }
+        }
+
+        public void OnPositionChange(Vector3 position)
+        {
+            if (_cloneEffect != null)
+            {
+                _cloneEffect.transform.position = SkillComplierWindow.GetCharacterPosition() + position;
+            }
+        }
+
+        public void OnRotationChange(Vector3 rotation)
+        {
+            if (_cloneEffect != null)
+            {
+                _cloneEffect.transform.localEulerAngles = rotation;
+            }
+        }
+
+        public void OnSimulate(float deltaTime)
+        {
+            if (_animationAgent != null)
+            {
+                _animationAgent.OnSimulate(deltaTime);
+            }
+
+            if (_particleAgent != null)
+            {
+                _particleAgent.OnSimulate(deltaTime);
             }
         }
 
@@ -106,6 +164,7 @@ namespace SkillSystem.Config
             {
                 _particleAgent.OnDestroy();
                 _particleAgent = null;
+                
             }
 
             if (_animationAgent != null)

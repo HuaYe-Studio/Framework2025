@@ -10,6 +10,8 @@ namespace SkillSystem.Agent
     
         private Animation _animation;
         private double _lastRuntime;
+
+        public bool IsPlaying = false;
     
         public void InitPlayAnim(Transform trans)
         {
@@ -24,6 +26,7 @@ namespace SkillSystem.Agent
 
         public void Onupdate()
         {
+            if (!IsPlaying) return;
             
             if (_animation == null || _animation.clip == null) return;
             
@@ -39,6 +42,14 @@ namespace SkillSystem.Agent
         
             //动画采样
             _animation.clip.SampleAnimation(_animation.gameObject , (float)currentTime);
+        }
+
+        public void OnSimulate(float deltaTime)
+        {
+            if (_animation == null || _animation.clip == null) return;
+            
+            //动画播放进度
+            _animation.clip.SampleAnimation(_animation.gameObject , deltaTime);
         }
     
 #endif

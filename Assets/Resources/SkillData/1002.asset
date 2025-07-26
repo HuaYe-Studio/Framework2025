@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6848c9eff2ef46849c245c231e8dd374, type: 3}
-  m_Name: 1001
+  m_Name: 1002
   m_EditorClassIdentifier: 
   CharacterConfig:
     SkillCharacter: {fileID: 0}
-    AnimationClip: {fileID: 7400002, guid: 52c2de492ef1443458626e80a78b7c99, type: 3}
-    animProgess: 400
+    AnimationClip: {fileID: 7400000, guid: 77fc626278dbd774a9e6b1fee68562c4, type: 3}
+    animProgess: 1966
     IsLoopAnim: 0
     LoopCount: 0
-    LogicFrame: 32
-    AnimLength: 2.166667
-    AnimDuration: 2166.667
+    LogicFrame: 29
+    AnimLength: 1.9666672
+    AnimDuration: 1966.6672
   SkillConfig:
     SkillIcon: {fileID: 0}
-    SkillId: 1001
+    SkillId: 1002
     SkillName: aa
     SkillManaCost: 100
-    SkillShakeBeforeTimeMS: 400
-    SkillDurationMS: 2000
+    SkillShakeBeforeTimeMS: 300
+    SkillDurationMS: 1900
     SkillShakeAfterTimeMS: 700
     SkillCooldownMS: 0
     SkillType: 0
@@ -42,8 +42,8 @@ MonoBehaviour:
     SkillPortrait: {fileID: 0}
     SkillDescription: 
   DamageConfigs:
-  - TriggerLogicFrame: 360
-    EndLogicFrame: 450
+  - TriggerLogicFrame: 300
+    EndLogicFrame: 460
     TriggerIntervalMs: 0
     FollowEffect: 0
     DamageType: 0
@@ -61,10 +61,10 @@ MonoBehaviour:
     TriggerSkillId: 0
   EffectConfigs:
   - Effect: {fileID: 1919708242137258, guid: e60d36cff17a1ce4db49ef54f9e72f61, type: 3}
-    TriggerFrame: 290
+    TriggerFrame: 300
     EndFrame: 950
-    EffectOffset: {x: 0, y: 0.8, z: 0.42}
-    EffectRotate: {x: -39.2, y: 0, z: -114.11}
+    EffectOffset: {x: 0, y: 0.8, z: 0.4}
+    EffectRotate: {x: 0, y: 0, z: 0}
     EffectType: 0
     ShowTransParentType: 0
     TransParentType: 0

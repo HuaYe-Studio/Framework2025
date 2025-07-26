@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NUnit.Framework;
 using Sirenix.OdinInspector;
 
 #if UNITY_EDITOR
@@ -26,13 +27,15 @@ namespace SkillSystem.Config
         public List<SkillDamageConfig> DamageConfigs;
 
         public List<EffectConfig> EffectConfigs;
+        
+        public List<SkillAudioConfig> AudioConfigs;
 
 
 #if UNITY_EDITOR
         
         
         public static void SaveData(SkillCharacterConfig characterConfig, SkillConfig skillConfig,
-            List<SkillDamageConfig> damageConfigs, List<EffectConfig> effectConfigs)
+            List<SkillDamageConfig> damageConfigs, List<EffectConfig> effectConfigs , List<SkillAudioConfig> audioConfigs)
         {
             // SkillDataConfig data = ScriptableObject.CreateInstance<SkillDataConfig>();
             // data.CharacterConfig = characterConfig;
@@ -52,8 +55,10 @@ namespace SkillSystem.Config
             data.SkillConfig = CreateCopy(skillConfig);
             data.DamageConfigs = damageConfigs.Select(CreateCopy).ToList();
             data.EffectConfigs = effectConfigs.Select(CreateCopy).ToList();
+            data.AudioConfigs = audioConfigs.Select(CreateCopy).ToList();
             
             string Path = "Assets/Scripts/SkillSystem/SkillData/" + skillConfig.SkillId + ".asset";
+            
             AssetDatabase.DeleteAsset(Path);
             AssetDatabase.CreateAsset(data, Path);
             
