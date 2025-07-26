@@ -5,17 +5,111 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Attack.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Attack/ColliderObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Attack/ColliderObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character/CharacterBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character/CharacterBase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillAudioConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillAudioConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/EnemyLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/EnemyLogic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/HuTaoLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/HuTaoLogic.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/GhostSamurai_APose_Idle.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/GhostSamurai_APose_Idle.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/FixPhysicMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/FixPhysicMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/Attack/Root/GhostSamurai_APose_Attack01_1_ALL_Root.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/Attack/Root/GhostSamurai_APose_Attack01_1_ALL_Root.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/Attack/Root/GhostSamurai_APose_Attack01_2_Root.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/Attack/Root/GhostSamurai_APose_Attack01_2_Root.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/Attack/Root/GhostSamurai_APose_Attack01_3_Root.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/Attack/Root/GhostSamurai_APose_Attack01_3_Root.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/Hit/Root/GhostSamurai_APose_Large_Hit_2_Root.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtRes/Animation/GhostSamurai_Animset/Animation/katana/APose/Hit/Root/GhostSamurai_APose_Large_Hit_2_Root.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/AABBTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/AABBTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider/ColliderBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider/ColliderBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider/FixIntBoxCollider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider/FixIntBoxCollider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider/FixIntCylinderCollider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider/FixIntCylinderCollider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider/FixIntSphereCollider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Collider/FixIntSphereCollider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/FixIntPhysics3D.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/FixIntPhysics3D.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/BoxColliderGizmo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/BoxColliderGizmo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/CylinderColliderGizom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/CylinderColliderGizom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/FixPhysicMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/FixPhysicMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/SphereColliderGizom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/Gizmo/SphereColliderGizom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/PhysicsManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FixIntPhysics3D/PhysicsManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/LogicRandom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/LogicRandom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/AcosLookupTable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/AcosLookupTable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/Atan2LookupTable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/Atan2LookupTable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/FixInt.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/FixInt.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/FixIntMath.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/FixIntMath.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/FixIntVector2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/FixIntVector2.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/FixIntVector3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/FixIntVector3.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/SinCosLookupTable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixMath/FixIntMath/SinCosLookupTable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActorAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActorAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActorGravity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActorGravity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActorMove.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActorMove.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActorSkill.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicActorSkill.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicRandom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicLayer/LogicRandom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RenderLayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RenderLayer/RenderObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RenderLayer/RenderObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Agent/AnimationAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Agent/AnimationAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Agent/ParticleAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Agent/ParticleAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/CharacterControls/Hutao.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/CharacterControls/Hutao.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/EffectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/EffectConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDamageConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDamageConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDataConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDataConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillEffectLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillEffectLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Render.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Render/SkillEffectRender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Render/SkillEffectRender.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Skill.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Skill.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/SkillSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/SkillSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/Main.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/Main.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/PlayerCombatControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/PlayerCombatControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/PlayerLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/PlayerLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/PlayerRender.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/PlayerRender.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +120,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d292e42b7b354516a1fbb4aaa866bbc81dfe00/ef/8a50ba83/GL.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/Main.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/PlayerCombatControl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -115,7 +210,12 @@
       <workItem from="1752162444854" duration="1152000" />
       <workItem from="1752506769082" duration="39000" />
       <workItem from="1752506815534" duration="353000" />
-      <workItem from="1752836900723" duration="6222000" />
+      <workItem from="1752836900723" duration="7288000" />
+      <workItem from="1753013044101" duration="644000" />
+      <workItem from="1753077404354" duration="3509000" />
+      <workItem from="1753427794744" duration="1420000" />
+      <workItem from="1753449404349" duration="5761000" />
+      <workItem from="1753509094779" duration="30754000" />
     </task>
     <servers />
   </component>

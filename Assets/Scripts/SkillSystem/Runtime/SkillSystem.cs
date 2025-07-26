@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using LogicLayer;
 using Sirenix.Utilities;
+using SkillSystem.Character;
 using UnityEngine;
 
 namespace SkillSystem.Runtime
@@ -9,20 +9,21 @@ namespace SkillSystem.Runtime
     public class SkillSystem
     {
         
-        private LogicActor _actor;
+        
+        private CharacterBase _character;
         
         private List<Skill> _skills = new List<Skill>();
 
-        public SkillSystem(LogicActor actor)
+        public SkillSystem(CharacterBase character)
         {
-            _actor = actor;
+            _character = character;
         }
 
         public void InitSkills(int[] skillIds)
         {
             skillIds.ForEach(id =>
             {
-                Skill skill = new Skill(id, _actor);
+                Skill skill = new Skill(id, _character);
                 _skills.Add(skill);
 
             });
@@ -36,6 +37,12 @@ namespace SkillSystem.Runtime
             {
                 if (skill._skillID == skillID)
                 {
+                    if (skill.CurrentSkillState == Skill.SkillState.Before
+                        )
+                    {
+                        return null;
+                    }
+                    
                     skill.ReleaseSkill(releaseAfterCallback, (s, combinationSkill) =>
                     {
                         releaseSkillEnd?.Invoke(s);
@@ -53,9 +60,14 @@ namespace SkillSystem.Runtime
             return null;
         }
 
-        public void OnLogicFrameUpdate()
+        // public void OnLogicFrameUpdate()
+        // {
+        //     _skills.ForEach(skill => skill.OnLogicFrameUpdate());
+        // }
+
+        public void OnUpdate()
         {
-            _skills.ForEach(skill => skill.OnLogicFrameUpdate());
+            _skills.ForEach(skill => skill.OnUpdate());
         }
     }
 }

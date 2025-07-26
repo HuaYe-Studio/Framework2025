@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
+using NUnit.Framework;
 using SkillSystem.Config;
-using SkillSystem.Runtime.Logic;
-using SkillSystem.Runtime.Render;
 using UnityEngine;
 
 namespace SkillSystem.Runtime
@@ -10,65 +9,49 @@ namespace SkillSystem.Runtime
     {
         
         //Key 为 HashCode  Value 为特效对象
-        private Dictionary<int , SkillEffectLogic> _effects = new Dictionary<int , SkillEffectLogic>();
+        private Dictionary<int , EffectConfig> _effects = new Dictionary<int , EffectConfig>();
         
         // ReSharper disable Unity.PerformanceAnalysis
-        public void OnLogicFrameUpdateEffect()
+        
+        private Dictionary<int , EffectConfig> _effectEnd = new Dictionary<int , EffectConfig>();
+        
+        private Dictionary<int , GameObject> _effectTargets = new Dictionary<int , GameObject>();
+        
+       
+
+        public void OnUpdateEffect()
         {
-            if (_skillDataConfig.EffectConfigs != null && _skillDataConfig.EffectConfigs.Count > 0)
+            if (_skillDataConfig.EffectConfigs is { Count: > 0 })
             {
                 _skillDataConfig.EffectConfigs.ForEach(effect =>
                 {
-                    if (effect != null && _currentLogicTime == effect.TriggerFrame)
-                    {
-                        DestroyEffect(effect);
 
+                    if (effect != null && _accUpdateTimeMS >= effect.TriggerFrame &&  !_effects.ContainsKey(effect.GetHashCode()))
+                    {
+                        _effects.Add(effect.GetHashCode(), effect);
                         //生成特效
                         GameObject effectCache = GameObject.Instantiate(effect.Effect);
-                        effectCache.transform.localPosition = Vector3.zero;
-                        effectCache.transform.localScale = Vector3.one;
-                        effectCache.transform.localRotation = Quaternion.identity;
-
-                        SkillEffectRender skillEffectRender = effectCache.GetComponent<SkillEffectRender>();
-                        if (skillEffectRender == null)
-                        {
-                            skillEffectRender = effectCache.AddComponent<SkillEffectRender>();
-                        }
-                        
-                        
-                        
-                        
-                        SkillEffectLogic effectLogic =
-                            new SkillEffectLogic(LogicObjectType.Effect, effect, skillEffectRender, _skillCreator);
-                        skillEffectRender.SetLogicObject(effectLogic);
-                        _effects.Add(effect.GetHashCode(), effectLogic);
+                        effectCache.transform.position = _character.transform.position + effect.EffectOffset;
+                        effectCache.transform.localEulerAngles = effect.EffectRotate;
+                        _effectTargets.Add(effect.GetHashCode(), effectCache);
                         
                         
                     }
 
-                    if (effect != null &&_currentLogicTime == effect.EndFrame)
+                    if (effect != null &&_accUpdateTimeMS >= effect.EndFrame &&  !_effectEnd.ContainsKey(effect.GetHashCode()))
                     {
                         //销毁特效
-                        DestroyEffect(effect);
+                        _effectEnd.Add(effect.GetHashCode(), effect);
+                        GameObject.Destroy(_effectTargets[effect.GetHashCode()]);
+                        _effectTargets.Remove(effect.GetHashCode());
                         
 
                     }
-                    
-                    
-                    
                 });
             }
         }
 
 
-        private void DestroyEffect(EffectConfig effectConfig)
-        {
-            
-            if (_effects.TryGetValue(effectConfig.GetHashCode(), out SkillEffectLogic effectLogic))
-            {
-                _effects.Remove(effectConfig.GetHashCode());
-                effectLogic.OnDestroy();
-            }
-        }
+        
     }
 }
