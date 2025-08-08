@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SkillSystem.Temp
 {
-    public class EnemyLogic : CharacterBase
+    public class EnemyLogic : CharacterBattleBase
     {
         public override void Awake()
         {

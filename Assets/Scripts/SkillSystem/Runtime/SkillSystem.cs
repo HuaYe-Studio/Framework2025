@@ -10,20 +10,20 @@ namespace SkillSystem.Runtime
     {
         
         
-        private CharacterBase _character;
+        private CharacterBattleBase _characterBattle;
         
         private List<Skill> _skills = new List<Skill>();
 
-        public SkillSystem(CharacterBase character)
+        public SkillSystem(CharacterBattleBase characterBattle)
         {
-            _character = character;
+            _characterBattle = characterBattle;
         }
 
         public void InitSkills(int[] skillIds)
         {
             skillIds.ForEach(id =>
             {
-                Skill skill = new Skill(id, _character);
+                Skill skill = new Skill(id, _characterBattle);
                 _skills.Add(skill);
 
             });
@@ -60,10 +60,10 @@ namespace SkillSystem.Runtime
             return null;
         }
 
-        // public void OnLogicFrameUpdate()
-        // {
-        //     _skills.ForEach(skill => skill.OnLogicFrameUpdate());
-        // }
+        public void OnLogicFrameUpdate()
+        {
+            _skills.ForEach(skill => skill.OnLogicFrameUpdate());
+        }
 
         public void OnUpdate()
         {

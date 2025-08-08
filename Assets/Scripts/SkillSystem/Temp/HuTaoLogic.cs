@@ -1,11 +1,12 @@
 ﻿using System;
+using SkillSystem.Attack;
 using SkillSystem.Character;
 using SkillSystem.Config;
 using UnityEngine;
 
 namespace SkillSystem.Temp
 {
-    public class HuTaoLogic : CharacterBase
+    public class HuTaoLogic : CharacterBattleBase
     {
         
         public override void Awake()
@@ -13,6 +14,7 @@ namespace SkillSystem.Temp
             base.Awake();
             _selfType = LogicObjectType.Player;
             CharacterId = 1000;
+            _normalSkillArr = new[] { 1001, 1002, 1003, 1004 ,};
         }
 
         public override void OnHit(SkillDamageConfig damageConfig)
@@ -30,10 +32,16 @@ namespace SkillSystem.Temp
 
         private void PlayerInputHandler()
         {
-            if (InputManager.MainInstance.LAttack)
+            if (InputManager.Instance.LAttack)
             {
                 ReleaseNormalSkill();
             }
+        }
+
+        protected override void SetNormalSkill()
+        {
+            base.SetNormalSkill();
+            _normalSkillArr = new[] { 1001, 1002, 1003, 1004, };
         }
     }
 }

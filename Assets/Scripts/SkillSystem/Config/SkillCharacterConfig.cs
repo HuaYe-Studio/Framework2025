@@ -162,7 +162,7 @@ namespace SkillSystem.Config
                 
                 //根据当前进度进行采样
                 // float progressValue = (value / 100) * AnimationClip.length;
-                // LogicFrame = (int)(progressValue / LogicFrameConfig.LogicFrameInterval);
+                LogicFrame = (int)(value / LogicFrameConfig.LogicFrameIntervalms);
                 AnimationClip.SampleAnimation(tempCharacter, animProgess / 1000f);
             
                 SkillComplierWindow.GetWindow().OnProgressValueChange(animProgess);

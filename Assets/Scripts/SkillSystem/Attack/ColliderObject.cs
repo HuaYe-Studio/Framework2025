@@ -16,8 +16,8 @@ namespace SkillSystem.Attack
         /// </summary>
         private LogicObjectType _target;
         private SkillDamageConfig _skillDamageConfig;
-        private Dictionary<int , CharacterBase> _charactersCache = new Dictionary<int , CharacterBase>();
-        private CharacterBase _character;
+        private Dictionary<int , CharacterBattleBase> _charactersCache = new Dictionary<int , CharacterBattleBase>();
+        private CharacterBattleBase _characterBattle;
 
         public bool Trigger = false;
        
@@ -25,9 +25,9 @@ namespace SkillSystem.Attack
         private void OnTriggerStay(Collider other)
         {
             if(!Trigger) return; 
-            if (other.TryGetComponent(out CharacterBase character))
+            if (other.TryGetComponent(out CharacterBattleBase character))
             {
-                if(character.CharacterId == _character.CharacterId) return;
+                if(character.CharacterId == _characterBattle.CharacterId) return;
                 //处理攻击
                 Debug.Log(character.SelfType);
                 Debug.Log(character.gameObject.name);
@@ -50,12 +50,12 @@ namespace SkillSystem.Attack
         }
 
         
-        public void Init(LogicObjectType target , SkillDamageConfig skillDamageConfig , CharacterBase character)
+        public void Init(LogicObjectType target , SkillDamageConfig skillDamageConfig , CharacterBattleBase characterBattle)
         {
             Debug.Log("开始检测");
             Trigger = true;
             _target = target;
-            _character = character;
+            _characterBattle = characterBattle;
             _skillDamageConfig = skillDamageConfig;
         }
 

@@ -9,11 +9,11 @@ namespace SkillSystem.Runtime
     {
         
         //Key 为 HashCode  Value 为特效对象
-        private Dictionary<int , EffectConfig> _effects = new Dictionary<int , EffectConfig>();
+        private Dictionary<int , SkillEffectConfig> _effects = new Dictionary<int , SkillEffectConfig>();
         
         // ReSharper disable Unity.PerformanceAnalysis
         
-        private Dictionary<int , EffectConfig> _effectEnd = new Dictionary<int , EffectConfig>();
+        private Dictionary<int , SkillEffectConfig> _effectEnd = new Dictionary<int , SkillEffectConfig>();
         
         private Dictionary<int , GameObject> _effectTargets = new Dictionary<int , GameObject>();
         
@@ -31,8 +31,8 @@ namespace SkillSystem.Runtime
                         _effects.Add(effect.GetHashCode(), effect);
                         //生成特效
                         GameObject effectCache = GameObject.Instantiate(effect.Effect);
-                        effectCache.transform.position = _character.transform.position + effect.EffectOffset;
-                        effectCache.transform.localEulerAngles = effect.EffectRotate;
+                        effectCache.transform.position = _characterBattle.transform.position + effect.EffectOffset;
+                        effectCache.transform.localEulerAngles = _characterBattle.transform.eulerAngles + effect.EffectRotate;
                         _effectTargets.Add(effect.GetHashCode(), effectCache);
                         
                         

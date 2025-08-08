@@ -28,7 +28,7 @@ MonoBehaviour:
     SkillManaCost: 100
     SkillShakeBeforeTimeMS: 300
     SkillDurationMS: 2400
-    SkillShakeAfterTimeMS: 1100
+    SkillShakeAfterTimeMS: 800
     SkillCooldownMS: 0
     SkillType: 0
     StockPileStageData: []

@@ -24,7 +24,7 @@ public class SkillComplierWindow : OdinEditorWindow
     public List<SkillDamageConfig> SkillDamageConfig = new List<SkillDamageConfig>();
     
     [TabGroup("SkillComplier", " Effect", SdfIconType.OpticalAudio, TextColor = "blue")]
-    public List<EffectConfig> EffectConfig = new List<EffectConfig>();
+    public List<SkillEffectConfig> EffectConfig = new List<SkillEffectConfig>();
     
     [TabGroup("SkillComplier", " Audio", SdfIconType.Soundwave, TextColor = "lightgreen")]
     public List<SkillAudioConfig> SkillAudioConfig = new List<SkillAudioConfig>();
@@ -109,7 +109,7 @@ public class SkillComplierWindow : OdinEditorWindow
         }
     }
 
-    private Dictionary<int , EffectConfig> _effectCache = new Dictionary<int , EffectConfig>();
+    private Dictionary<int , SkillEffectConfig> _effectCache = new Dictionary<int , SkillEffectConfig>();
     public void OnProgressValueChange(int value)
     {
         //特效

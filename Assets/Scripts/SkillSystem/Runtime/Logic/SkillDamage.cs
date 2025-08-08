@@ -94,13 +94,13 @@ namespace SkillSystem.Runtime
                     if (_accUpdateTimeMS >= damage.TriggerLogicFrame && !_hashTriggerCache.Contains(damage.GetHashCode()))
                     {
                         _hashTriggerCache.Add(damage.GetHashCode());
-                        switch (_character.SelfType)
+                        switch (_characterBattle.SelfType)
                         {
                             case LogicObjectType.Player:
                                 switch (damage.TargetType)
                                 {
                                     case TargetType.Enemy:
-                                        _character._collider.Init(LogicObjectType.Enemy , damage , _character);
+                                        _characterBattle._collider.Init(LogicObjectType.Enemy , damage , _characterBattle);
                                         break;
                                 }
                                 break;
@@ -110,7 +110,7 @@ namespace SkillSystem.Runtime
                     if (_accUpdateTimeMS >= damage.EndLogicFrame && !_hashEndCache.Contains(damage.GetHashCode()))
                     {
                         _hashEndCache.Add(damage.GetHashCode());
-                        _character._collider.OnAttackOver();
+                        _characterBattle._collider.OnAttackOver();
                     }
                 });
             }

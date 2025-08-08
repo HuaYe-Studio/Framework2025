@@ -48,15 +48,7 @@ MonoBehaviour:
     FollowEffect: 0
     DamageType: 0
     DamageRate: 0
-    DamageDetectionMode: 0
-    BoxSize: {x: 1, y: 1, z: 1}
-    BoxOffset: {x: 0, y: 0, z: 0}
-    SphereOffset: {x: 0, y: 0.9, z: 0}
-    Radius: 1
-    RadiusHeight: 0
-    ColliderPosType: 0
     TargetType: 2
-    Collider: {fileID: 0}
     AddBuffIds: 
     TriggerSkillId: 0
   EffectConfigs:
@@ -68,4 +60,9 @@ MonoBehaviour:
     EffectType: 0
     ShowTransParentType: 0
     TransParentType: 0
-  AudioConfigs: []
+  AudioConfigs:
+  - SkillAudio: {fileID: 8300000, guid: 5591acc776d3483439ba6bccf5d53786, type: 3}
+    SkillAudioName: attack1
+    TriggerFrame: 14
+    isLoop: 0
+    EndFrame: 0

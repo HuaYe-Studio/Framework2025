@@ -26,7 +26,7 @@ namespace SkillSystem.Config
 
         public List<SkillDamageConfig> DamageConfigs;
 
-        public List<EffectConfig> EffectConfigs;
+        public List<SkillEffectConfig> EffectConfigs;
         
         public List<SkillAudioConfig> AudioConfigs;
 
@@ -35,7 +35,7 @@ namespace SkillSystem.Config
         
         
         public static void SaveData(SkillCharacterConfig characterConfig, SkillConfig skillConfig,
-            List<SkillDamageConfig> damageConfigs, List<EffectConfig> effectConfigs , List<SkillAudioConfig> audioConfigs)
+            List<SkillDamageConfig> damageConfigs, List<SkillEffectConfig> effectConfigs , List<SkillAudioConfig> audioConfigs)
         {
             // SkillDataConfig data = ScriptableObject.CreateInstance<SkillDataConfig>();
             // data.CharacterConfig = characterConfig;
