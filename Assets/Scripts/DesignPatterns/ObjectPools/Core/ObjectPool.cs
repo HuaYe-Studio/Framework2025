@@ -1,11 +1,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 对象池
+/// </summary>
 public class ObjectPool : Singleton<ObjectPool>
 {
+    private enum PoolType
+    {
+        LRU,
+        LFU
+    };
+    private PoolType _poolType = PoolType.LRU;
+    
     private readonly Dictionary<string, List<GameObject>> _objPool = new Dictionary<string, List<GameObject>>();
     private readonly string path = "Prefabs/";
 
+    /// <summary>
+    /// 从池中获取一个对象
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
     public GameObject GetObj(string name)
     {
         GameObject obj = null;
@@ -23,8 +38,15 @@ public class ObjectPool : Singleton<ObjectPool>
         obj.SetActive(true);
         return obj;
     }
+    
+    
 
-    public void PushObj(string name, GameObject obj)
+    /// <summary>
+    /// 向池中归还一个对象
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="obj"></param>
+    public void ReturnObj(string name, GameObject obj)
     {
         obj.SetActive(false);
         
@@ -38,5 +60,22 @@ public class ObjectPool : Singleton<ObjectPool>
         }
         
         return;
+    }
+
+    /// <summary>
+    /// 清空指定类的池子
+    /// </summary>
+    /// <param name="name"></param>
+    public void ClearObj(string name)
+    {
+        _objPool[name].Clear();
+    }
+    
+    /// <summary>
+    /// 清空所有类的池
+    /// </summary>
+    public void ClearAllObj()
+    {
+        _objPool.Clear();
     }
 }

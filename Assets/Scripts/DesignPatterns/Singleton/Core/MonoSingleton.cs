@@ -1,7 +1,12 @@
 using UnityEngine;
 
+/// <summary>
+/// 懒汉mono单例模板
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
 {
+
     private static T _instance;
     private static readonly object _lock = new object();
 
@@ -33,7 +38,9 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
         Init();
     }
 
-    //初始化函数，子类覆写
+    /// <summary>
+    /// 初始化函、子类覆写
+    /// </summary>
     protected virtual void Init()
     {
         
