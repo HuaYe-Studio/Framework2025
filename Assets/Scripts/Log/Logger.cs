@@ -14,8 +14,18 @@ public static class Logger
         Error
     }
     
+#if UNITY_EDITOR
+    private static bool isEditor = true;
+#else
+        private static bool isEditor = false;
+#endif
+    
     //当前最低记录级别
-    public static LogLevel CurrentLogLevel { get; set; } = LogLevel.Info; // 默认Info及以上
+    public static LogLevel CurrentLogLevel { get; set; } = isEditor ?   LogLevel.Debug: LogLevel.Info; // 默认Info及以上
+    
+    
+    
+
     
     //为性能优化提供快速检查属性 (尤其对Debug)
     //根据当前最低记录级别设定是否启用不同分级的日志
