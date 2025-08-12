@@ -6,28 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventSystem/Core/EventCenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventSystem/Core/EventCenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/LogicFrameConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillAudioConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillAudioConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillCharacterConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillEffectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillEffectConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/Skill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1002.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1002.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1003.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1003.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1003.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1004.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDataConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDataConfig.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +118,8 @@
       <workItem from="1753509094779" duration="30754000" />
       <workItem from="1754645937038" duration="13795000" />
       <workItem from="1754888462672" duration="6521000" />
-      <workItem from="1754983066806" duration="1949000" />
+      <workItem from="1754983066806" duration="2272000" />
+      <workItem from="1754985805388" duration="973000" />
     </task>
     <servers />
   </component>

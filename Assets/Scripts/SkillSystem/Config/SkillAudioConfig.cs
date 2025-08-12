@@ -33,6 +33,9 @@ namespace SkillSystem.Config
 
 
 
+        /// <summary>
+        /// 音效文件发生变化时，更新音效文件名称
+        /// </summary>
         public void OnAudioChange()
         {
             if (SkillAudio != null)

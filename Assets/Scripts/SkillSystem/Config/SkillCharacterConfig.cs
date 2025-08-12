@@ -143,6 +143,9 @@ namespace SkillSystem.Config
         
         }
 
+        /// <summary>
+        /// 播放完毕
+        /// </summary>
         public void OnPlayOver()
         {
             _isPlaying = false;
@@ -152,7 +155,7 @@ namespace SkillSystem.Config
         /// <summary>
         /// 拖动进度条时触发
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="value">拖动的进度值</param>
         public void OnAnimProgressValueChange(int value)
         {
             if (SkillCharacter != null)
@@ -175,6 +178,10 @@ namespace SkillSystem.Config
             }
         }
 
+        /// <summary>
+        /// 动画片段改变时触发
+        /// </summary>
+        /// <param name="clip">新的动画切片</param>
         public void OnAnimationClipChanged(AnimationClip clip)
         {
             if(clip == null) return;
@@ -182,6 +189,9 @@ namespace SkillSystem.Config
             MaxLogicFrame = (int)(clip.length / LogicFrameConfig.LogicFrameInterval);
         }
 
+        /// <summary>
+        /// 在点击配置文件时的初始化
+        /// </summary>
         public void Init()
         {
             _maxAnimationLength = (int)(AnimationClip.length * 1000);

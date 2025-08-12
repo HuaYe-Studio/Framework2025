@@ -78,6 +78,12 @@ namespace SkillSystem.Config
 #endif
         
         
+        /// <summary>
+        /// 深拷贝
+        /// </summary>
+        /// <param name="original"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public static T CreateCopy<T>(T original)
         {
             string json = JsonUtility.ToJson(original);
