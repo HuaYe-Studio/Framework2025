@@ -74,7 +74,16 @@ namespace FilingSystem.Core
         /// 保存存档
         /// </summary>
         void SaveFile();
+        
+        /// <summary>
+        /// 删除存档
+        /// </summary>
+        /// <param name="fileName"></param>
         void DeleteFile(string fileName);
+        
+        /// <summary>
+        /// 删除所有存档
+        /// </summary>
         void DeleteAll();
     }
 
