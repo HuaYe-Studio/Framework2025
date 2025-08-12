@@ -25,10 +25,9 @@ namespace SkillSystem.Runtime
         
 
         
-        private int _accUpdateTimeMS = 0;
         
-        //当前累计运行时间
-        private int _accLogicTime=0;
+        //当前累计运行时间(ms)
+        private int _accLogicTimeMS = 0;
         //当前逻辑帧
         private int _currentLogicTime=0;
         
@@ -55,27 +54,20 @@ namespace SkillSystem.Runtime
 
         public void PlayAnim()
         {
-           
-            
-           
             _characterBattle.PlayAnim(_skillDataConfig.SkillConfig.SkillId.ToString());
-            
-            
         }
 
         public void SkillStart()
         {
 
-            _accUpdateTimeMS = 0;
             _isTriggeredDamage = false;
             _isTriggeredOver = false;
             _hashEndCache.Clear();
             _hashTriggerCache.Clear();
             
             _effects.Clear();
-            _effectEnd.Clear();
             
-            _accLogicTime = 0;
+            _accLogicTimeMS = 0;
             _currentLogicTime = 0;
 
 
@@ -92,63 +84,65 @@ namespace SkillSystem.Runtime
             CurrentSkillState = SkillState.After;
             OnReleaseAfterCallBack?.Invoke(this);
             
-            
-            
         }
 
        
 
         public void OnUpdate()
         {
-            if(CurrentSkillState == SkillState.None) return;
-            _accUpdateTimeMS += (int)(Time.deltaTime * 1000f);
-            if (CurrentSkillState == SkillState.Before &&
-                _accUpdateTimeMS >= _skillDataConfig.SkillConfig.SkillShakeAfterTimeMS)
-            {
-                SkillAfter();
-            }
-            
-            OnUpdateDamage();
-            OnUpdateEffect();
-            //容错率
-            if (_accUpdateTimeMS >= _skillDataConfig.CharacterConfig.AnimationClip.length * 1000f - 100)
-            {
-                SkillEnd();
-            }
+            // if(CurrentSkillState == SkillState.None) return;
+            // _accUpdateTimeMS += (int)(Time.deltaTime * 1000f);
+            // if (CurrentSkillState == SkillState.Before &&
+            //     _accUpdateTimeMS >= _skillDataConfig.SkillConfig.SkillShakeAfterTimeMS)
+            // {
+            //     SkillAfter();
+            // }
+            //
+            // // OnUpdateDamage();
+            // // OnUpdateEffect();
+            // //容错率
+            // if (_accUpdateTimeMS >= _skillDataConfig.CharacterConfig.AnimationClip.length * 1000f - 100)
+            // {
+            //     SkillEnd();
+            // }
         }
 
         public void OnLogicFrameUpdate()
         {
-            // if(CurrentSkillState == SkillState.None) return;
-            //
-            // _accLogicTime = _currentLogicTime * LogicFrameConfig.LogicFrameIntervalms;
-            //
-            // if (CurrentSkillState == SkillState.Before &&
-            //     _accLogicTime >= _skillDataConfig.SkillConfig.SkillShakeAfterTimeMS)
-            // {
-            //     SkillAfter();
-            //     
-            // }
+            if(CurrentSkillState == SkillState.None) return;
+            
+            _accLogicTimeMS = _currentLogicTime * LogicFrameConfig.LogicFrameIntervalms;
+            
+            
+            if (CurrentSkillState == SkillState.Before &&
+                _accLogicTimeMS >= _skillDataConfig.SkillConfig.SkillShakeAfterTimeMS)
+            {
+                SkillAfter();
+                
+            }
             //更新不同配置的逻辑帧，处理逻辑
             
             //更新特效逻辑帧
-            // OnLogicFrameUpdateEffect();
+            OnLogicFrameUpdateEffect();
             //更新伤害逻辑帧
-            // OnLogicFrameUpdateDamage();
-            //更新行动逻辑帧  //不适用定点数，因此毙掉
+            OnLogicFrameUpdateDamage();
+            //更新行动逻辑帧  //本项目不使用定点数，直接使用根运动，因此毙掉
             // OnLogicFrameUpdateMove();
             //更新音效逻辑帧
             OnLogicFrameUpdateAudio();
 
             //更新子弹逻辑帧
+            
+            Debug.Log(_skillDataConfig.CharacterConfig.LogicFrame);
 
-
-            // if (_currentLogicTime == _skillDataConfig.CharacterConfig.LogicFrame)
-            // {
-            //     SkillEnd();
-            // }
+            if (_currentLogicTime == _skillDataConfig.CharacterConfig.MaxLogicFrame)
+            {
+                SkillEnd();
+            }
             //逻辑帧自增
             _currentLogicTime++;
+            
+
         }
         
         public enum SkillState

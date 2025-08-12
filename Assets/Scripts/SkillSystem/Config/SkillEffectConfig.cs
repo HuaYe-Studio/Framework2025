@@ -47,7 +47,7 @@ namespace SkillSystem.Config
         private ParticleAgent _particleAgent;
         
         
-        private int _currentLogicFrame = 0;
+        // private int _currentLogicFrame = 0;
         private int _currentTimeMS = 0;
         private bool _isTrigger = false;
         private bool _isEnd = false;
@@ -56,7 +56,7 @@ namespace SkillSystem.Config
         {
             DestroyEffect();
 
-            _currentLogicFrame = 0;
+            // _currentLogicFrame = 0;
             _currentTimeMS = 0;
             _isTrigger = false;
             _isEnd = false;
@@ -103,12 +103,18 @@ namespace SkillSystem.Config
             }
         }
 
-        public void CreateEffect(bool isPlay)
+        public void CreateEffect(bool isPlay = false)
         {
             if (Effect != null)
             {
                 _cloneEffect = GameObject.Instantiate(Effect);
-                _cloneEffect.transform.position = SkillComplierWindow.GetCharacterPosition() + EffectOffset;
+                // _cloneEffect.transform.position = SkillComplierWindow.GetCharacterPosition().position + EffectOffset;
+                //模型空间位置
+                _cloneEffect.transform.position = SkillComplierWindow.GetCharacterTransform().position + 
+                                                  SkillComplierWindow.GetCharacterTransform().forward * EffectOffset.z + 
+                                                  SkillComplierWindow.GetCharacterTransform().right * EffectOffset.x + 
+                                                  SkillComplierWindow.GetCharacterTransform().up * EffectOffset.y;
+                
                 _cloneEffect.transform.localRotation = Quaternion.Euler(EffectRotate);
                 //代理释放动画或粒子
                 _animationAgent = new AnimationAgent();
@@ -128,7 +134,10 @@ namespace SkillSystem.Config
         {
             if (_cloneEffect != null)
             {
-                _cloneEffect.transform.position = SkillComplierWindow.GetCharacterPosition() + position;
+                _cloneEffect.transform.position = SkillComplierWindow.GetCharacterTransform().position + 
+                                                  SkillComplierWindow.GetCharacterTransform().forward * position.z + 
+                                                  SkillComplierWindow.GetCharacterTransform().right * position.x + 
+                                                  SkillComplierWindow.GetCharacterTransform().up * position.y;
             }
         }
 
@@ -136,7 +145,7 @@ namespace SkillSystem.Config
         {
             if (_cloneEffect != null)
             {
-                _cloneEffect.transform.localEulerAngles = rotation;
+                _cloneEffect.transform.localRotation = Quaternion.Euler(rotation);
             }
         }
 

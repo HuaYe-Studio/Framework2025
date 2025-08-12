@@ -15,10 +15,11 @@ MonoBehaviour:
   CharacterConfig:
     SkillCharacter: {fileID: 0}
     AnimationClip: {fileID: 7400000, guid: 5029b485ac85ca0478e8877b25e6dec6, type: 3}
-    animProgess: 519
+    animProgess: 2733
     IsLoopAnim: 0
     LoopCount: 0
-    LogicFrame: 32
+    MaxLogicFrame: 170
+    LogicFrame: 170
     AnimLength: 2.7333336
     AnimDuration: 2733.3335
   SkillConfig:
@@ -53,8 +54,8 @@ MonoBehaviour:
     TriggerSkillId: 0
   EffectConfigs:
   - Effect: {fileID: 1294101409476956, guid: 231e3be01ac50c047bb16d07fd8d2ba5, type: 3}
-    TriggerFrame: 500
-    EndFrame: 1100
+    TriggerFrame: 30
+    EndFrame: 90
     EffectOffset: {x: 0, y: 0.8, z: 0.75}
     EffectRotate: {x: 0, y: 0, z: 0}
     EffectType: 0

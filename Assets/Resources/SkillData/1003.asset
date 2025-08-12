@@ -15,10 +15,11 @@ MonoBehaviour:
   CharacterConfig:
     SkillCharacter: {fileID: 0}
     AnimationClip: {fileID: 7400000, guid: 8decc86bf4985ea42b3005926975955f, type: 3}
-    animProgess: 2500
+    animProgess: 2006
     IsLoopAnim: 0
     LoopCount: 0
-    LogicFrame: 38
+    MaxLogicFrame: 156
+    LogicFrame: 125
     AnimLength: 2.500001
     AnimDuration: 2500.001
   SkillConfig:
@@ -42,8 +43,8 @@ MonoBehaviour:
     SkillPortrait: {fileID: 0}
     SkillDescription: 
   DamageConfigs:
-  - TriggerLogicFrame: 230
-    EndLogicFrame: 350
+  - TriggerLogicFrame: 13
+    EndLogicFrame: 21
     TriggerIntervalMs: 0
     FollowEffect: 0
     DamageType: 0
@@ -51,8 +52,8 @@ MonoBehaviour:
     TargetType: 2
     AddBuffIds: 
     TriggerSkillId: 0
-  - TriggerLogicFrame: 450
-    EndLogicFrame: 600
+  - TriggerLogicFrame: 27
+    EndLogicFrame: 37
     TriggerIntervalMs: 0
     FollowEffect: 0
     DamageType: 0
@@ -62,19 +63,29 @@ MonoBehaviour:
     TriggerSkillId: 0
   EffectConfigs:
   - Effect: {fileID: 1919708242137258, guid: e60d36cff17a1ce4db49ef54f9e72f61, type: 3}
-    TriggerFrame: 230
-    EndFrame: 830
-    EffectOffset: {x: 0, y: 0.8, z: 0.3}
+    TriggerFrame: 14
+    EndFrame: 74
+    EffectOffset: {x: 0, y: 0.8, z: 0.5}
     EffectRotate: {x: 0, y: 0, z: -223}
     EffectType: 0
     ShowTransParentType: 0
     TransParentType: 0
   - Effect: {fileID: 1919708242137258, guid: e60d36cff17a1ce4db49ef54f9e72f61, type: 3}
-    TriggerFrame: 450
-    EndFrame: 1050
-    EffectOffset: {x: 0, y: 0.8, z: 0.3}
+    TriggerFrame: 27
+    EndFrame: 87
+    EffectOffset: {x: 0, y: 0.8, z: 0.5}
     EffectRotate: {x: 0, y: 0, z: 50.98}
     EffectType: 0
     ShowTransParentType: 0
     TransParentType: 0
-  AudioConfigs: []
+  AudioConfigs:
+  - SkillAudio: {fileID: 8300000, guid: 5591acc776d3483439ba6bccf5d53786, type: 3}
+    SkillAudioName: attack1
+    TriggerFrame: 14
+    isLoop: 0
+    EndFrame: 0
+  - SkillAudio: {fileID: 8300000, guid: 5591acc776d3483439ba6bccf5d53786, type: 3}
+    SkillAudioName: attack1
+    TriggerFrame: 27
+    isLoop: 0
+    EndFrame: 0

@@ -37,9 +37,15 @@ namespace SkillSystem.Config
         [LabelText("循环次数")]
         [ShowIf("IsLoopAnim")]
         public int LoopCount = 0;
-    
+
+
+        [BoxGroup("动画数据")] 
+        [LabelText("最大逻辑帧数")]
+        [ReadOnly]
+        public int MaxLogicFrame;
+        
         [BoxGroup("动画数据")]
-        [LabelText("逻辑帧数")]
+        [LabelText("当前逻辑帧数")]
         public int LogicFrame = 0;
     
         [BoxGroup("动画数据")]
@@ -74,7 +80,7 @@ namespace SkillSystem.Config
                 
             
                 AnimLength = IsLoopAnim ? AnimationClip.length * LoopCount : AnimationClip.length;
-                LogicFrame = (int)(IsLoopAnim ? AnimationClip.length / 0.066f * LoopCount : AnimationClip.length / 0.066f);
+                LogicFrame = (int)(IsLoopAnim ? AnimationClip.length / LogicFrameConfig.LogicFrameInterval * LoopCount : AnimationClip.length / LogicFrameConfig.LogicFrameInterval);
                 AnimDuration = IsLoopAnim ? AnimationClip.length * 1000 * LoopCount : AnimationClip.length * 1000;
                 _lastRuntime = 0;
                 //开始播放动画
@@ -173,11 +179,17 @@ namespace SkillSystem.Config
         {
             if(clip == null) return;
             _maxAnimationLength = (int)(clip.length * 1000);
+            MaxLogicFrame = (int)(clip.length / LogicFrameConfig.LogicFrameInterval);
         }
 
         public void Init()
         {
             _maxAnimationLength = (int)(AnimationClip.length * 1000);
+            if (AnimationClip != null)
+            {
+                MaxLogicFrame = (int)(AnimationClip.length / LogicFrameConfig.LogicFrameInterval);
+            }
+
         }
 
     }

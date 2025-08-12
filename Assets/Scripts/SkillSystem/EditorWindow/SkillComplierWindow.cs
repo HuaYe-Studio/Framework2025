@@ -115,12 +115,12 @@ public class SkillComplierWindow : OdinEditorWindow
         //特效
         EffectConfig.ForEach(x =>
         {
-            if (value >= x.TriggerFrame && value <= x.EndFrame && !_effectCache.ContainsKey(x.GetHashCode()))
+            if (value >= x.TriggerFrame * LogicFrameConfig.LogicFrameIntervalms && value <= x.EndFrame * LogicFrameConfig.LogicFrameIntervalms && !_effectCache.ContainsKey(x.GetHashCode()))
             {
                 _effectCache.Add(x.GetHashCode(), x);
                 x.CreateEffect(false);
             }
-            else if (value < x.TriggerFrame || value > x.EndFrame)
+            else if (value < x.TriggerFrame * LogicFrameConfig.LogicFrameIntervalms || value > x.EndFrame * LogicFrameConfig.LogicFrameIntervalms)
             {
                 if (_effectCache.ContainsKey(x.GetHashCode()))
                 {
@@ -132,7 +132,7 @@ public class SkillComplierWindow : OdinEditorWindow
         });
         
         //模拟
-        _effectCache.Values.ToList().ForEach(x => x.OnSimulate((value - x.TriggerFrame) / 1000f));
+        _effectCache.Values.ToList().ForEach(x => x.OnSimulate((value - x.TriggerFrame * LogicFrameConfig.LogicFrameIntervalms) / 1000f));
         
         
     }
@@ -162,7 +162,7 @@ public class SkillComplierWindow : OdinEditorWindow
     
         while (_accLogicFrameTime > _nextLogicFrameTime)
         {
-            OnLogicFrameHandle();
+            // OnLogicFrameHandle();
     
             _nextLogicFrameTime += LogicFrameConfig.LogicFrameInterval;
         }
@@ -183,10 +183,10 @@ public class SkillComplierWindow : OdinEditorWindow
     
     
 
-    public void OnLogicFrameHandle()
-    {
-        // EffectConfig.ForEach(x => x.OnLogicFrameUpdate());
-    }
+    // public void OnLogicFrameHandle()
+    // {
+    //     EffectConfig.ForEach(x => x.OnLogicFrameUpdate());
+    // }
 
     /// <summary>
     /// 开始播放技能
@@ -221,19 +221,23 @@ public class SkillComplierWindow : OdinEditorWindow
     }
 
     /// <summary>
-    /// 获取角色的位置
+    /// 获取角色的信息
     /// </summary>
     /// <returns>角色位置</returns>
-    public static Vector3 GetCharacterPosition()
+    public static Transform GetCharacterTransform()
     {
         SkillComplierWindow window = GetWindow<SkillComplierWindow>();
         
         if(window.CharacterConfig.SkillCharacter != null)
-            return window.CharacterConfig.SkillCharacter.transform.position;
-        return Vector3.zero;
+            return window.CharacterConfig.SkillCharacter.transform;
+        return null;
     }
-    
-    
-    
+
+    private void OnLostFocus()
+    {
+       EffectConfig.ForEach(x => x.DestroyEffect());
+    }
+
+
 #endif
 }

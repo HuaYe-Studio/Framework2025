@@ -15,10 +15,11 @@ MonoBehaviour:
   CharacterConfig:
     SkillCharacter: {fileID: 0}
     AnimationClip: {fileID: 7400002, guid: 52c2de492ef1443458626e80a78b7c99, type: 3}
-    animProgess: 2166
+    animProgess: 750
     IsLoopAnim: 0
     LoopCount: 0
-    LogicFrame: 32
+    MaxLogicFrame: 135
+    LogicFrame: 46
     AnimLength: 2.166667
     AnimDuration: 2166.667
   SkillConfig:
@@ -42,8 +43,8 @@ MonoBehaviour:
     SkillPortrait: {fileID: 0}
     SkillDescription: 
   DamageConfigs:
-  - TriggerLogicFrame: 360
-    EndLogicFrame: 450
+  - TriggerLogicFrame: 21
+    EndLogicFrame: 27
     TriggerIntervalMs: 0
     FollowEffect: 0
     DamageType: 0
@@ -53,8 +54,8 @@ MonoBehaviour:
     TriggerSkillId: 0
   EffectConfigs:
   - Effect: {fileID: 1919708242137258, guid: e60d36cff17a1ce4db49ef54f9e72f61, type: 3}
-    TriggerFrame: 290
-    EndFrame: 950
+    TriggerFrame: 17
+    EndFrame: 77
     EffectOffset: {x: 0, y: 0.8, z: 0.4}
     EffectRotate: {x: -39.2, y: 0, z: -114.11}
     EffectType: 0
@@ -63,6 +64,6 @@ MonoBehaviour:
   AudioConfigs:
   - SkillAudio: {fileID: 8300000, guid: 5591acc776d3483439ba6bccf5d53786, type: 3}
     SkillAudioName: attack1
-    TriggerFrame: 14
+    TriggerFrame: 17
     isLoop: 0
     EndFrame: 0

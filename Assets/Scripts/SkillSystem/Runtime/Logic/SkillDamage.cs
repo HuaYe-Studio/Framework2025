@@ -16,6 +16,8 @@ namespace SkillSystem.Runtime
         private List<int> _hashTriggerCache = new List<int>();
         private List<int> _hashEndCache = new List<int>();
 
+
+
         /// <summary>
         /// 逻辑帧更新伤害
         /// </summary>
@@ -78,22 +80,21 @@ namespace SkillSystem.Runtime
         //             
         //             
         //         });
-        //         
-        //         
-        //         
-        //         
+
+
+
+
         //     }
         // }
 
-        public void OnUpdateDamage()
+        public void OnLogicFrameUpdateDamage()
         {
             if (_skillDataConfig.DamageConfigs is { Count: > 0 })
             {
                 _skillDataConfig.DamageConfigs.ForEach(damage =>
                 {
-                    if (_accUpdateTimeMS >= damage.TriggerLogicFrame && !_hashTriggerCache.Contains(damage.GetHashCode()))
+                    if (_currentLogicTime == damage.TriggerLogicFrame)
                     {
-                        _hashTriggerCache.Add(damage.GetHashCode());
                         switch (_characterBattle.SelfType)
                         {
                             case LogicObjectType.Player:
@@ -107,98 +108,46 @@ namespace SkillSystem.Runtime
                         }
                     }
 
-                    if (_accUpdateTimeMS >= damage.EndLogicFrame && !_hashEndCache.Contains(damage.GetHashCode()))
+                    if (_currentLogicTime == damage.EndLogicFrame)
                     {
-                        _hashEndCache.Add(damage.GetHashCode());
                         _characterBattle._collider.OnAttackOver();
                     }
                 });
             }
         }
 
-        /// <summary>
-        /// 生成碰撞体
-        /// </summary>
-        // public ColliderBehaviour CreateCollisionBody(SkillDamageConfig config)
+        // public void OnUpdateDamage()
         // {
-        //     ColliderBehaviour collider = null;
-        //    
-        //     
-        //     return collider;
-        // }
-        //
-        // /// <summary>
-        // /// 销毁对应的碰撞体
-        // /// </summary>
-        // /// <param name="damageConfig"></param>
-        // private void DestroyCollisionBody(SkillDamageConfig damageConfig)
-        // {
-        //     
-        //     if (_collider.TryGetValue(damageConfig.GetHashCode(), out ColliderBehaviour collider))
+        //     if (_skillDataConfig.DamageConfigs is { Count: > 0 })
         //     {
-        //         _collider.Remove(damageConfig.GetHashCode());
-        //         collider.OnRelease();
-        //     }
-        // }
-
-
-        /// <summary>
-        /// 触发伤害
-        /// </summary>
-        // public void TriggerDamage(ColliderBehaviour collider , SkillDamageConfig damageConfig)
-        // {
-        //     //1.获取敌人信息
-        //     List<LogicActor> enemies =
-        //         BattleWorld.GetExitsLogicCtrl<BattleLogicCtrl>().GetEnemyList(_skillCreator.ObjectType);
-        //     
-        //     //伤害对象列表
-        //     List<LogicActor> damageTargets = new List<LogicActor>();
-        //     
-        //     //2.碰撞检测
-        //     enemies.ForEach(enemy =>
-        //     {
-        //         switch (collider.ColliderType)
+        //         _skillDataConfig.DamageConfigs.ForEach(damage =>
         //         {
-        //             case ColliderType.Box:
-        //                 if (PhysicsManager.IsCollision(collider as FixIntBoxCollider, enemy.Collider))
+        //             if (_accUpdateTimeMS >= damage.TriggerLogicFrame && !_hashTriggerCache.Contains(damage.GetHashCode()))
+        //             {
+        //                 _hashTriggerCache.Add(damage.GetHashCode());
+        //                 switch (_characterBattle.SelfType)
         //                 {
-        //                     damageTargets.Add(enemy);
+        //                     case LogicObjectType.Player:
+        //                         switch (damage.TargetType)
+        //                         {
+        //                             case TargetType.Enemy:
+        //                                 _characterBattle._collider.Init(LogicObjectType.Enemy , damage , _characterBattle);
+        //                                 break;
+        //                         }
+        //                         break;
         //                 }
-        //                 break;
-        //             case ColliderType.Shpere:
-        //                 if (PhysicsManager.IsCollision(enemy.Collider , collider as FixIntSphereCollider))
-        //                 {
-        //                     damageTargets.Add(enemy);
-        //                 }
-        //                 break;
-        //         }
-        //     });
+        //             }
         //
-        //     //释放列表
-        //     enemies.Clear();
-        //     
-        //     //3.触发伤害
-        //     damageTargets.ForEach(target =>
-        //     {
-        //         target.SkillDamage(999 , damageConfig);
-        //         
-        //         //TODO : 添加Buff ， 特效 ，音效
-        //         AddHitEffect(target);
-        //         PlayHitAudio();
-        //         
-        //     });
-        //
-        //
-        //
-        // }
-        //
-        // public void AddHitEffect(LogicActor actor)
-        // {
-        //     if (_skillDataConfig.SkillConfig.SkillHitEffect != null)
-        //     {
-        //         actor.OnHit(_skillDataConfig.SkillConfig.SkillHitEffect , _skillDataConfig.SkillConfig.SkillHitEffectDurationMS , _skillCreator);
+        //             if (_accUpdateTimeMS >= damage.EndLogicFrame && !_hashEndCache.Contains(damage.GetHashCode()))
+        //             {
+        //                 _hashEndCache.Add(damage.GetHashCode());
+        //                 _characterBattle._collider.OnAttackOver();
+        //             }
+        //         });
         //     }
         // }
+
+        
         
     }
 }
