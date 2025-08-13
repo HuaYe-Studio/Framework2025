@@ -210,7 +210,12 @@ public class AudioController : MonoBehaviour {
             mMusicSource.loop = true;
             mMusicSource.clip = clip;
             mMusicSource.volume = 0;
-            DG.Tweening.DOTween.To(()=> mMusicSource.volume, x=> mMusicSource.volume = x, mMusicVolume, duration);
+            
+            //D
+            // DG.Tweening.DOTween.To(()=> mMusicSource.volume, x=> mMusicSource.volume = x, mMusicVolume, duration);
+
+            
+            
             mMusicSource.Play();
         }
     }

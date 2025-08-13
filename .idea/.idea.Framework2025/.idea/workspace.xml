@@ -5,42 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/ColliderSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/ColliderSystem/ColliderBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/ColliderSystem/ColliderBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Model.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Presenter.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Presenter/BasePresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Presenter/BasePresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Presenter/IPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Presenter/IPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/View.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/View/IView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/View/IView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character/CharacterBattleBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character/CharacterBattleBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDamageConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDamageConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/EditorWindow/SkillComplierWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/Skill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Scene/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Scene/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1003.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/SkillData/1004.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/HuTaoLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/HuTaoLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/AudioController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Model.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,21 +35,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/skillsystem&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\unity\2025.6000\Editor\Unity.exe" />
@@ -154,6 +122,7 @@
       <workItem from="1754985805388" duration="6605000" />
       <workItem from="1755064961186" duration="797000" />
       <workItem from="1755065803778" duration="13408000" />
+      <workItem from="1755085457924" duration="367000" />
     </task>
     <servers />
   </component>
