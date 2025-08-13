@@ -11,7 +11,7 @@ namespace SkillSystem.Character
     {
         protected int _health;
         protected int _mana;
-        protected LogicObjectType _selfType;
+        protected LogicObjectType _selfType = LogicObjectType.Player;
         
         protected int _characterId;
         
@@ -47,7 +47,7 @@ namespace SkillSystem.Character
 
         public virtual void OnHit(SkillDamageConfig damageConfig)
         {
-            
+            //自行处理逻辑
         }
 
         public virtual void InitSkill()
@@ -129,6 +129,17 @@ namespace SkillSystem.Character
             }
             return false;
         }
+
+        public void OnHitAddEffect(GameObject effect , float duration)
+        {
+            if (effect != null)
+            {
+                GameObject effectObj = Instantiate(effect, transform.position, transform.rotation);
+                Destroy(effectObj, duration);
+            }
+        }
+
+
     }
 
     public enum LogicObjectType
@@ -136,5 +147,8 @@ namespace SkillSystem.Character
         Player,
         Enemy,
         Effect,
+        None,
     }
+    
+    
 }

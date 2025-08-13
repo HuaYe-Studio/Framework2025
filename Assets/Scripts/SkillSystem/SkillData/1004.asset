@@ -15,11 +15,11 @@ MonoBehaviour:
   CharacterConfig:
     SkillCharacter: {fileID: 0}
     AnimationClip: {fileID: 7400000, guid: 5029b485ac85ca0478e8877b25e6dec6, type: 3}
-    animProgess: 2733
+    animProgess: 2504
     IsLoopAnim: 0
     LoopCount: 0
     MaxLogicFrame: 170
-    LogicFrame: 170
+    LogicFrame: 156
     AnimLength: 2.7333336
     AnimDuration: 2733.3335
   SkillConfig:
@@ -43,12 +43,14 @@ MonoBehaviour:
     SkillPortrait: {fileID: 0}
     SkillDescription: 
   DamageConfigs:
-  - TriggerLogicFrame: 520
-    EndLogicFrame: 650
+  - TriggerLogicFrame: 33
+    EndLogicFrame: 40
     TriggerIntervalMs: 0
     FollowEffect: 0
     DamageType: 0
     DamageRate: 0
+    BoxSize: {x: 5, y: 1.5, z: 5}
+    BoxOffset: {x: 0, y: 0.75, z: 0}
     TargetType: 2
     AddBuffIds: 
     TriggerSkillId: 0

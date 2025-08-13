@@ -1,5 +1,7 @@
 using System;
 using Sirenix.OdinInspector;
+using SkillSystem.ColliderSystem;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace SkillSystem.Config
@@ -32,6 +34,13 @@ namespace SkillSystem.Config
         public int DamageRate;
 
         
+        [LabelText("Box碰撞盒大小")]
+        [OnValueChanged("OnBoxSizeValueChange")]
+        public Vector3 BoxSize = new Vector3(1, 1, 1);
+        
+        [LabelText("Box碰撞盒偏移")]
+        [OnValueChanged("OnOffsetValueChange")]
+        public Vector3 BoxOffset = new Vector3(0, 0, 0);
         
         [LabelText("目标类型")]
         public TargetType TargetType;
@@ -49,15 +58,53 @@ namespace SkillSystem.Config
 
         
 #if UNITY_EDITOR
-        
-        
 
-       
+        private BoxColliderDetection _boxCollider;
+
+        private int _curLogicFrame;
+
+        public void OnBoxSizeValueChange(Vector3 boxSize)
+        {
+            if (_boxCollider != null)
+            {
+                _boxCollider.SetBoxData(SkillComplierWindow.GetCharacterTransform().position + 
+                                        SkillComplierWindow.GetCharacterTransform().forward * BoxOffset.z + 
+                                        SkillComplierWindow.GetCharacterTransform().up * BoxOffset.y + 
+                                        SkillComplierWindow.GetCharacterTransform().right * BoxOffset.x, boxSize);
+            }
+        }
+
+        public void OnOffsetValueChange(Vector3 boxOffset)
+        {
+            if (_boxCollider != null)
+            {
+                _boxCollider.SetBoxData(SkillComplierWindow.GetCharacterTransform().position + 
+                                        SkillComplierWindow.GetCharacterTransform().forward * boxOffset.z + 
+                                        SkillComplierWindow.GetCharacterTransform().up * boxOffset.y + 
+                                        SkillComplierWindow.GetCharacterTransform().right * boxOffset.x, BoxSize);
+            }
+        }
+
+        public void CreateCollider()
+        {
+            _boxCollider =
+                new BoxColliderDetection(BoxSize, SkillComplierWindow.GetCharacterTransform().position + BoxOffset);
+            _boxCollider.SetBoxData(SkillComplierWindow.GetCharacterTransform().position + 
+                                    SkillComplierWindow.GetCharacterTransform().forward * BoxOffset.z + 
+                                    SkillComplierWindow.GetCharacterTransform().up * BoxOffset.y + 
+                                    SkillComplierWindow.GetCharacterTransform().right * BoxOffset.x , BoxSize);
+        }
+
+        public void DestroyCollider()
+        {
+            if(_boxCollider != null) _boxCollider.OnRelease();
+        }
 
 
-        
+
+
 #endif
-        
+
     }
     
     

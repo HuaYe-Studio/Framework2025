@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace SkillSystem.Config
 {
@@ -28,7 +29,7 @@ namespace SkillSystem.Config
         [LabelText("技能前摇时间ms")]
         public int SkillShakeBeforeTimeMS;
         
-        [LabelText("技能攻击持续时间ms")]
+        [FormerlySerializedAs("SkillDuration")] [LabelText("技能攻击持续时间ms")]
         public int SkillDurationMS;
         
         [LabelText("技能后摇时间ms")]
@@ -62,8 +63,8 @@ namespace SkillSystem.Config
         [LabelText("技能命中特效"),TitleGroup("技能渲染" , "所有渲染数据会在释放技能时触发")]
         public GameObject SkillHitEffect;
         
-        [LabelText("特效激活时间ms"),TitleGroup("技能渲染" , "所有渲染数据会在释放技能时触发")]
-        public int SkillHitEffectDurationMS;
+        [FormerlySerializedAs("SkillHitEffectDurationMS")] [LabelText("特效激活时间"),TitleGroup("技能渲染" , "所有渲染数据会在释放技能时触发")]
+        public float SkillHitEffectDuration;
         
         [LabelText("技能命中音效"),TitleGroup("技能渲染" , "所有渲染数据会在释放技能时触发")]
         public AudioClip SkillHitSound;

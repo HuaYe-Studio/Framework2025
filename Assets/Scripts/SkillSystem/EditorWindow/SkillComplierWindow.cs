@@ -110,6 +110,7 @@ public class SkillComplierWindow : OdinEditorWindow
     }
 
     private Dictionary<int , SkillEffectConfig> _effectCache = new Dictionary<int , SkillEffectConfig>();
+    private Dictionary<int , SkillDamageConfig> _damageCache = new Dictionary<int , SkillDamageConfig>();
     public void OnProgressValueChange(int value)
     {
         //特效
@@ -128,6 +129,26 @@ public class SkillComplierWindow : OdinEditorWindow
                     x.DestroyEffect();
                 }
                 
+            }
+        });
+        
+        //伤害
+        SkillDamageConfig.ForEach(x =>
+        {
+            if (value >= x.TriggerLogicFrame * LogicFrameConfig.LogicFrameIntervalms &&
+                value <= x.EndLogicFrame * LogicFrameConfig.LogicFrameIntervalms &&
+                !_damageCache.ContainsKey(x.GetHashCode()))
+            {
+                _damageCache.Add(x.GetHashCode(), x);
+                x.CreateCollider();
+            }
+            else if(value < x.TriggerLogicFrame * LogicFrameConfig.LogicFrameIntervalms || value > x.EndLogicFrame * LogicFrameConfig.LogicFrameIntervalms)
+            {
+                if (_damageCache.ContainsKey(x.GetHashCode()))
+                {
+                    _damageCache.Remove(x.GetHashCode());
+                    x.DestroyCollider();
+                }
             }
         });
         
@@ -236,6 +257,7 @@ public class SkillComplierWindow : OdinEditorWindow
     private void OnLostFocus()
     {
        EffectConfig.ForEach(x => x.DestroyEffect());
+       SkillDamageConfig.ForEach(x => x.DestroyCollider());
     }
 
 

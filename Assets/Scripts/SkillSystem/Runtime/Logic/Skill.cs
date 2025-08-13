@@ -60,10 +60,7 @@ namespace SkillSystem.Runtime
         public void SkillStart()
         {
 
-            _isTriggeredDamage = false;
-            _isTriggeredOver = false;
-            _hashEndCache.Clear();
-            _hashTriggerCache.Clear();
+            _targerCache.Clear();
             
             _effects.Clear();
             
@@ -90,21 +87,7 @@ namespace SkillSystem.Runtime
 
         public void OnUpdate()
         {
-            // if(CurrentSkillState == SkillState.None) return;
-            // _accUpdateTimeMS += (int)(Time.deltaTime * 1000f);
-            // if (CurrentSkillState == SkillState.Before &&
-            //     _accUpdateTimeMS >= _skillDataConfig.SkillConfig.SkillShakeAfterTimeMS)
-            // {
-            //     SkillAfter();
-            // }
-            //
-            // // OnUpdateDamage();
-            // // OnUpdateEffect();
-            // //容错率
-            // if (_accUpdateTimeMS >= _skillDataConfig.CharacterConfig.AnimationClip.length * 1000f - 100)
-            // {
-            //     SkillEnd();
-            // }
+
         }
 
         public void OnLogicFrameUpdate()
@@ -133,7 +116,6 @@ namespace SkillSystem.Runtime
 
             //更新子弹逻辑帧
             
-            Debug.Log(_skillDataConfig.CharacterConfig.LogicFrame);
 
             if (_currentLogicTime == _skillDataConfig.CharacterConfig.MaxLogicFrame)
             {

@@ -14,7 +14,6 @@ namespace SkillSystem.Temp
             base.Awake();
             _selfType = LogicObjectType.Player;
             CharacterId = 1000;
-            _normalSkillArr = new[] { 1001, 1002, 1003, 1004 ,};
         }
 
         public override void OnHit(SkillDamageConfig damageConfig)
