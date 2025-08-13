@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6848c9eff2ef46849c245c231e8dd374, type: 3}
+  m_Name: 1001
+  m_EditorClassIdentifier: 
+  CharacterConfig:
+    SkillCharacter: {fileID: 0}
+    AnimationClip: {fileID: 7400002, guid: 52c2de492ef1443458626e80a78b7c99, type: 3}
+    animProgess: 399
+    IsLoopAnim: 0
+    LoopCount: 0
+    MaxLogicFrame: 135
+    LogicFrame: 24
+    AnimLength: 2.166667
+    AnimDuration: 2166.667
+  SkillConfig:
+    SkillIcon: {fileID: 0}
+    SkillId: 1001
+    SkillName: aa
+    SkillManaCost: 100
+    SkillShakeBeforeTimeMS: 400
+    SkillDurationMS: 2000
+    SkillShakeAfterTimeMS: 700
+    SkillCooldownMS: 0
+    SkillType: 0
+    StockPileStageData: []
+    SkillGuideEffect: {fileID: 0}
+    SkillGuideRange: 0
+    NextSkillId: 0
+    SkillHitEffect: {fileID: 1210069404974878, guid: fbab27c98b168764eb295cfff1e9f61f, type: 3}
+    SkillHitEffectDuration: 1
+    SkillHitSound: {fileID: 8300000, guid: 105386b6613abb44c9b4d83b5ebf6fe7, type: 3}
+    ShowSkillPortrait: 0
+    SkillPortrait: {fileID: 0}
+    SkillDescription: 
+  DamageConfigs:
+  - TriggerLogicFrame: 21
+    EndLogicFrame: 27
+    TriggerIntervalMs: 0
+    FollowEffect: 0
+    DamageType: 0
+    DamageRate: 0
+    BoxSize: {x: 1.37, y: 3, z: 4.55}
+    BoxOffset: {x: 0, y: 1.5, z: 0}
+    TargetType: 2
+    AddBuffIds: 
+    TriggerSkillId: 0
+  EffectConfigs:
+  - Effect: {fileID: 1919708242137258, guid: e60d36cff17a1ce4db49ef54f9e72f61, type: 3}
+    TriggerFrame: 17
+    EndFrame: 77
+    EffectOffset: {x: 0, y: 0.8, z: 0.4}
+    EffectRotate: {x: -39.2, y: 0, z: -114.11}
+    EffectType: 0
+    ShowTransParentType: 0
+    TransParentType: 0
+  AudioConfigs:
+  - SkillAudio: {fileID: 8300000, guid: 5591acc776d3483439ba6bccf5d53786, type: 3}
+    SkillAudioName: attack1
+    TriggerFrame: 17
+    isLoop: 0
+    EndFrame: 0
