@@ -142,7 +142,7 @@ namespace SkillSystem.Runtime
 
         public void OnRelease()
         {
-            
+            _targerCache.Clear();
         }
         
         
