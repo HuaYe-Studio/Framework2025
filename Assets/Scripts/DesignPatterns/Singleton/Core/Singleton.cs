@@ -25,7 +25,7 @@ using UnityEngine;
         /// </summary>
         protected virtual void Init()
         {
-        
+            
         }
     }
 

@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/TagSwitcher.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Runtime/Logic/SkillDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/MainPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/MainPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SkillSystemSampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SkillSystemSampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character/CharacterBattleBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character/CharacterBattleBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDamageConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDamageConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/EnemyLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/EnemyLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/GeneratorConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/GeneratorConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/OdinMenuItemExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/OdinMenuItemExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/UIComponentType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/UIComponentType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/UIViewTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/UIViewTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewBinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewBinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewGeneratorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewGeneratorWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewInfoProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/TagSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewInfoProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Temp/GameMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Temp/GameMain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/ViewPath/MainPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/ViewPath/MainPanelView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +37,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/3c/6d358c7e/IServiceContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d292e42b7b354516a1fbb4aaa866bbc81dfe00/62/34370196/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d292e42b7b354516a1fbb4aaa866bbc81dfe00/ef/8a50ba83/GL.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/ColliderSystem/BoxColliderDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/DevelopmentTools.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewGeneratorWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@a73638a9fb22/Runtime/UGUI/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -33,21 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/UIFramework&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\unity\2025.6000\Editor\Unity.exe" />
@@ -121,6 +144,11 @@
       <workItem from="1755064961186" duration="797000" />
       <workItem from="1755065803778" duration="13408000" />
       <workItem from="1755085457924" duration="791000" />
+      <workItem from="1755103280215" duration="5316000" />
+      <workItem from="1755146450526" duration="4642000" />
+      <workItem from="1755153417243" duration="29298000" />
+      <workItem from="1755238159856" duration="3379000" />
+      <workItem from="1755241555414" duration="3916000" />
     </task>
     <servers />
   </component>

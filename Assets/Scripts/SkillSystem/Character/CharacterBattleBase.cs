@@ -10,15 +10,20 @@ namespace SkillSystem.Character
     public class CharacterBattleBase : MonoBehaviour
     {
         protected int _health;
+        protected int _maxHealth;
         protected int _mana;
         protected LogicObjectType _selfType = LogicObjectType.Player;
+        protected bool _isDead;
         
         protected int _characterId;
         
-        public int Health { get { return _health; } set { _health = value; } }
-        public int Mana { get { return _mana; } set { _mana = value; } }
-        public int CharacterId { get { return _characterId; } set { _characterId = value; } }
-        public LogicObjectType SelfType { get { return _selfType; } set { _selfType = value; } }
+        public virtual int Health { get { return _health; } set { _health = value; } }
+        public virtual int MaxHealth { get { return _maxHealth; } set { _maxHealth = value; } }
+        public virtual int Mana { get { return _mana; } set { _mana = value; } }
+        public virtual int CharacterId { get { return _characterId; } set { _characterId = value; } }
+        public virtual LogicObjectType SelfType { get { return _selfType; } set { _selfType = value; } }
+        
+        public virtual bool IsDead { get { return _isDead; } set { _isDead = value; } }
         
         public Vector3 Position => transform.position;
         public Quaternion Rotation => transform.rotation;
@@ -48,6 +53,11 @@ namespace SkillSystem.Character
         public virtual void OnHit(SkillDamageConfig damageConfig)
         {
             //自行处理逻辑
+            
+            
+            
+            
+            
         }
 
         public virtual void InitSkill()
@@ -130,7 +140,7 @@ namespace SkillSystem.Character
             return false;
         }
 
-        public void OnHitAddEffect(GameObject effect , float duration)
+        public virtual void OnHitAddEffect(GameObject effect , float duration)
         {
             if (effect != null)
             {

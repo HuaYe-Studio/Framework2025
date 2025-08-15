@@ -26,5 +26,16 @@ namespace UIFramework.Presenter
                 throw new Exception($"{this.gameObject}对象上不存在View组件,获取View失败");
             }
         }
+        
+        
+        
+        //不使用IOC框架
+        //直接通过单例来访问
+        //因此不添加获取服务的接口
+        
+        
+        
+        
+        
     }
 }
