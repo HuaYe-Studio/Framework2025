@@ -89,6 +89,7 @@ namespace UIFramework.Editor
             sb.AppendLine("using UnityEngine;");
             sb.AppendLine("using UnityEngine.UI;");
             sb.AppendLine("using UIFramework.Core;");
+            sb.AppendLine("using TMPro;");
 
             sb.AppendLine();
             

@@ -8,19 +8,10 @@ namespace UIFramework.Editor
     {
         
         [MenuItem("UI/MVP生成器")]
-        public static void ShowViewGeneratorWindow(MenuCommand command)
+        public static void ShowViewGeneratorWindow()
         {
-            var window = UnityEditor.EditorWindow.GetWindow<ViewGeneratorWindow>();
-            // var window = UnityEditor.EditorWindow.GetWindowWithRect<ViewGeneratorWindow>(new Rect(0, 0, 1000, 620));
+            var window = EditorWindow.GetWindow<ViewGeneratorWindow>();
             window.Show();
-            BaseView view = command.context as BaseView;
-            if (view == null)
-            {
-                Debug.Log("view is null");
-                return;
-            }
-
-            window.SetViewComponent(view);
         }
         
         [MenuItem("CONTEXT/BaseView/绑定View组件")]
@@ -28,6 +19,25 @@ namespace UIFramework.Editor
         {
             ViewBinder binder = new ViewBinder(command.context);
             binder.Bind();
+        }
+
+        [MenuItem("GameObject/配置MVP")]
+        public static void ChooseGameObjectOpenWindow()
+        {
+            GameObject go = Selection.gameObjects[0];
+            
+            var window = EditorWindow.GetWindow<ViewGeneratorWindow>();
+            window.Show();
+            window.generateObject = go;
+            window.Preview();
+        }
+
+        [MenuItem("GameObject/自动切换UITag #V")]
+        public static void AutoSwitchTag()
+        {
+            GameObject[] gos = Selection.gameObjects;
+            TagSwitcher.SwitchTag(gos);
+            
         }
     }
 }

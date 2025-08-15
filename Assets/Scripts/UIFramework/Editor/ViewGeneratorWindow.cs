@@ -13,14 +13,6 @@ namespace UIFramework.Editor
 {
     public class ViewGeneratorWindow : OdinEditorWindow
     {
-        private BaseView _view;
-        
-        public void SetViewComponent(BaseView view)
-        {
-            _view = view;
-
-            classNamespace = view.GetType().Namespace;
-        }
         
         private const string Title = "View代码生成";
 
@@ -44,6 +36,7 @@ namespace UIFramework.Editor
         [VerticalGroup(LeftVertical)]
         [BoxGroup(LeftBoxGroup, LabelText = "生成设置")]
         [LabelText("命名空间")]
+        [ReadOnly]
         public string classNamespace = "UIFramework.ViewPath";
         
         [HorizontalGroup(Horizontal)]

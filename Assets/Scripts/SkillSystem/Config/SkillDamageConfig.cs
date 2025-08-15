@@ -30,6 +30,9 @@ namespace SkillSystem.Config
         [LabelText("伤害类型")]
         public DamageType DamageType;
         
+        [LabelText("伤害值")]
+        public int DamageValue;
+        
         [LabelText("伤害倍率")]
         public int DamageRate;
 

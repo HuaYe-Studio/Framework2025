@@ -4,16 +4,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UIFramework.Core;
+using TMPro;
 
 namespace UIFramework.ViewPath
 {
 	public class MainPanelView : BaseUIPanelView
 	{
 		[Header("可绑定组件")]
-		public Button Test1;
-		public Transform Test2;
-		public Image HPBK;
+		public Transform HP_Transform;
 		public Image HP;
+		public TextMeshProUGUI BossName;
 
 	}
 }

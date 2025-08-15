@@ -48,6 +48,7 @@ MonoBehaviour:
     TriggerIntervalMs: 0
     FollowEffect: 0
     DamageType: 0
+    DamageValue: 20
     DamageRate: 0
     BoxSize: {x: 5, y: 1.5, z: 5}
     BoxOffset: {x: 0, y: 0.75, z: 0.4}
