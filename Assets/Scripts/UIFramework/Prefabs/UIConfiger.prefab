@@ -165,6 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6404497578039639016}
+  - component: {fileID: 5746009918744581344}
   m_Layer: 0
   m_Name: UIConfiger
   m_TagString: Untagged
@@ -190,6 +191,54 @@ Transform:
   - {fileID: 955341695421375409}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5746009918744581344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219575739342653481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c31bce659246cda93463935ec4fc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootCanvas: {fileID: 5068573477981320672}
+  defaultLayers:
+  - layerName: Background
+    sortingOrder: 0
+    createOnStart: 1
+  - layerName: Main
+    sortingOrder: 100
+    createOnStart: 1
+  - layerName: Popup
+    sortingOrder: 200
+    createOnStart: 1
+  - layerName: Loading
+    sortingOrder: 300
+    createOnStart: 1
+  - layerName: Tips
+    sortingOrder: 400
+    createOnStart: 1
+  - layerName: Top
+    sortingOrder: 9999
+    createOnStart: 1
+  defaultPanels:
+  - panelPrefab: {fileID: 525568469252065781, guid: e9a0acc4b4222114bad0b3fde8c3f314, type: 3}
+    targetLayer: Main
+    panelKey: 
+    addOnStart: 1
+    showOnStart: 1
+  isClearLayer: 0
+  isClearPanel: 0
+  isAddLayer: 1
+  isAddPanel: 0
+  createDefaultLayers: 0
+  addDefaultPanels: 1
+  targetPanelKey: 
+  showArgument: 
+  targetLayerName: 
+  targetSortingOrder: 100
 --- !u!1 &1565927516419165568
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +688,7 @@ GameObject:
   - component: {fileID: 6063086799825772556}
   - component: {fileID: 6833243158133851581}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: UIRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
