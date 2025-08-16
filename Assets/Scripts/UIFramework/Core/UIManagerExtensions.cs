@@ -112,11 +112,11 @@ namespace UIFramework.Core
         /// <param name="layer">目标层级枚举值</param>
         /// <remarks>
         /// 如果目标层级没有活动面板会触发警告
-        /// 实际调用PopPanel(string)方法
+        /// 实际调用HideTopPanel(string)方法
         /// </remarks>
-        public static void PopPanel(this IUIManager self, UILayer layer)
+        public static void HideTopPanel(this IUIManager self, UILayer layer)
         {
-            self.PopPanel(layer.ToString());
+            self.HideTopPanel(layer.ToString());
         }
 
         public static void ClearPanels(this IUIManager self, UILayer layer)

@@ -499,7 +499,7 @@ namespace UIFramework.Core
                 return;
             }
 
-            _uiManager.PopAllPanel(targetLayerName);
+            _uiManager.HideAllPanel(targetLayerName);
             Debug.Log($"弹出层级 {targetLayerName} 中的所有面板");
         }
 

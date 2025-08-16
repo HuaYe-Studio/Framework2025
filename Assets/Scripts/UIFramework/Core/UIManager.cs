@@ -164,7 +164,7 @@ namespace UIFramework.Core
             }
 
             // 先移除该层级的所有面板
-            PopAllPanel(layerName);
+            HideAllPanel(layerName);
 
             // 清理字典
             _canvasLayerDict.Remove(layerName);
@@ -527,7 +527,7 @@ namespace UIFramework.Core
             OnPanelHidden?.Invoke(key, panelInfo.panel);
         }
 
-        public void PopPanel(string layer, object arg = null)
+        public void HideTopPanel(string layer, object arg = null)
         {
             if (!_activePanelDict.TryGetValue(layer, out var layerPanelList))
             {
@@ -557,15 +557,15 @@ namespace UIFramework.Core
             OnPanelHidden?.Invoke(topPanel.key, topPanel.panel);
         }
 
-        public void PopPanels(string layer, int count, object arg = null)
+        public void HideTopPanels(string layer, int count, object arg = null)
         {
             for (var i = 0; i < count; i++)
             {
-                PopPanel(layer, arg);
+                HideTopPanel(layer, arg);
             }
         }
 
-        public void PopAllPanel(string layer, object arg = null)
+        public void HideAllPanel(string layer, object arg = null)
         {
             if (!_activePanelDict.TryGetValue(layer, out var layerPanelList))
             {
@@ -600,13 +600,13 @@ namespace UIFramework.Core
             }
         }
 
-        public void PopAllLayersPanels(object arg = null)
+        public void HideAllLayersPanels(object arg = null)
         {
             // 使用ToList()创建副本，避免并发修改异常
             var layersToPop = _activePanelDict.Keys.ToList();
             foreach (var layer in layersToPop)
             {
-                PopAllPanel(layer, arg);
+                HideAllPanel(layer, arg);
             }
         }
 

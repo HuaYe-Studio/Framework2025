@@ -403,7 +403,7 @@ namespace UIFramework.Core
         void HidePanel(string key, object arg = null);
 
         /// <summary>
-        /// 弹出指定层级最顶部的面板（隐藏）
+        /// 隐藏指定层级最顶部的面板
         /// </summary>
         /// <param name="layer">目标层级名称</param>
         /// <param name="arg">隐藏面板时传入的参数</param>
@@ -411,18 +411,18 @@ namespace UIFramework.Core
         /// 类似栈操作，隐藏最后显示的面板
         /// 如果层级不存在或无面板会输出相应提示
         /// </remarks>
-        void PopPanel(string layer, object arg = null);
+        void HideTopPanel(string layer, object arg = null);
 
         /// <summary>
-        /// 弹出指定层级的多个顶部面板
+        /// 隐藏指定层级的多个顶部面板
         /// </summary>
         /// <param name="layer">目标层级名称</param>
-        /// <param name="count">要弹出的面板数量</param>
+        /// <param name="count">要隐藏的面板数量</param>
         /// <param name="arg">隐藏面板时传入的参数</param>
-        void PopPanels(string layer, int count, object arg = null);
+        void HideTopPanels(string layer, int count, object arg = null);
 
         /// <summary>
-        /// 弹出指定层级的所有面板
+        /// 隐藏指定层级的所有面板
         /// </summary>
         /// <param name="layer">目标层级名称</param>
         /// <param name="arg">隐藏面板时传入的参数</param>
@@ -430,16 +430,16 @@ namespace UIFramework.Core
         /// 会隐藏该层级中的所有活跃面板
         /// 按照从顶部到底部的顺序依次隐藏
         /// </remarks>
-        void PopAllPanel(string layer, object arg = null);
+        void HideAllPanel(string layer, object arg = null);
 
         /// <summary>
-        /// 弹出所有层级的所有面板
+        /// 隐藏所有层级的所有面板
         /// </summary>
         /// <param name="arg">隐藏面板时传入的参数</param>
         /// <remarks>
         /// 会隐藏UI系统中的所有活跃面板
         /// </remarks>
-        void PopAllLayersPanels(object arg = null);
+        void HideAllLayersPanels(object arg = null);
         #endregion
 
         #region State Management

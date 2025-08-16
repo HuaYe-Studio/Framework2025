@@ -5,28 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/TagSwitcher.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1001.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1002.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1003.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/SkillData/1004.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/MainPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/MainPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SkillSystemSampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SkillSystemSampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character/CharacterBattleBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Character/CharacterBattleBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDamageConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Config/SkillDamageConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/EnemyLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/EnemyLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/GeneratorConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/GeneratorConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/OdinMenuItemExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/OdinMenuItemExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/UIComponentType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/UIComponentType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/UIViewTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/UIViewTemplate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewBinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewBinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewGeneratorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewGeneratorWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewInfoProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/TagSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewInfoProvider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Temp/GameMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Temp/GameMain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/ViewPath/MainPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/ViewPath/MainPanelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/IUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/IUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIConfiger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIConfiger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIManagerExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIManagerExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +44,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/UIFramework&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -149,6 +133,8 @@
       <workItem from="1755153417243" duration="29298000" />
       <workItem from="1755238159856" duration="3379000" />
       <workItem from="1755241555414" duration="3916000" />
+      <workItem from="1755358530328" duration="211000" />
+      <workItem from="1755368485180" duration="94000" />
     </task>
     <servers />
   </component>

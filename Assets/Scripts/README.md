@@ -98,7 +98,7 @@ public class MainMenuPresenter : BasePresenter<MainMenuPanelView>
     private void OnSettingsButtonClick()
     {
         // 显示设置面板
-        var uiManager = GetService<IUIManager>();
+        var uiManager = UIManager.Instance
         uiManager.ShowPanel<MainMenuPanelView>();
     }
 
@@ -157,8 +157,8 @@ Canvas mainLayer = uiManager.GetLayer("Main");
 // 移除层级
 uiManager.RemoveLayer("CustomLayer");
 
-// 弹出层级中的所有面板
-uiManager.PopAllPanel("Popup");
+// 隐藏层级中的所有面板
+uiManager.HideAllPanel("Popup");
 ```
 
 ### 面板管理
@@ -320,17 +320,17 @@ public class MyPanel : BaseUIPanelView
 #### 栈式面板管理
 
 ```csharp
-// 弹出单个面板
-uiManager.PopPanel("Window");
+// 隐藏单个最上层面板
+uiManager.HideTopPanel("Window");
 
-// 弹出多个面板
-uiManager.PopPanels("Window", 3);
+// 隐藏多个面板
+uiManager.HideTopPanels("Window", 3);
 
-// 弹出层级所有面板
-uiManager.PopAllPanel("Popup");
+// 隐藏层级所有面板
+uiManager.HideAllPanel("Popup");
 
-// 弹出所有层级的所有面板
-uiManager.PopAllLayersPanels();
+// 隐藏所有层级的所有面板
+uiManager.HideAllLayersPanels();
 ```
 
 #### 批量清理
