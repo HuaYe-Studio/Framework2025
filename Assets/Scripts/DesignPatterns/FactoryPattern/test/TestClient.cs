@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -5,7 +6,7 @@ using UnityEngine;
 /// </summary>
 public class TestClient : MonoBehaviour
 {
-    private ITest[] _tests;
+    private List<ITest> _tests;
 
     void Start()
     {
