@@ -4,6 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Framework2025/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/IUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/IUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIConfiger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIConfiger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIManagerExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFramework/Core/UIManagerExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +21,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/3c/6d358c7e/IServiceContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d292e42b7b354516a1fbb4aaa866bbc81dfe00/62/34370196/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d292e42b7b354516a1fbb4aaa866bbc81dfe00/ef/8a50ba83/GL.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/ColliderSystem/BoxColliderDetection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SkillSystem/Temp/DevelopmentTools.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIFramework/Editor/ViewGeneratorWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@a73638a9fb22/Runtime/UGUI/UI/Core/Graphic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
 }</component>
+  <component name="ProjectId" id="2zYJ7mHSnxSvN17PzzIhNnbbn0l" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,23 +44,30 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 6000.0.52f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\unity\2025.6000\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath D:\GitHub\Framework2025 -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\GitHub\Framework2025" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="单元测试(批处理模式)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 6000.0.52f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\unity\2025.6000\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\GitHub\Framework2025 -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\GitHub\Framework2025" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -51,6 +77,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -61,16 +90,51 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
+      <changelist id="d9950b7c-d551-44eb-a947-e4f2906537ec" name="更改" comment="" />
+      <created>1740570603608</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+      <updated>1740570603608</updated>
+      <workItem from="1740570604659" duration="63000" />
+      <workItem from="1751901909880" duration="506000" />
+      <workItem from="1751950039394" duration="3181000" />
+      <workItem from="1751953491033" duration="2942000" />
+      <workItem from="1751987666482" duration="2878000" />
+      <workItem from="1752162444854" duration="1152000" />
+      <workItem from="1752506769082" duration="39000" />
+      <workItem from="1752506815534" duration="353000" />
+      <workItem from="1752836900723" duration="7288000" />
+      <workItem from="1753013044101" duration="644000" />
+      <workItem from="1753077404354" duration="3509000" />
+      <workItem from="1753427794744" duration="1420000" />
+      <workItem from="1753449404349" duration="5761000" />
+      <workItem from="1753509094779" duration="30754000" />
+      <workItem from="1754645937038" duration="13795000" />
+      <workItem from="1754888462672" duration="6521000" />
+      <workItem from="1754983066806" duration="2272000" />
+      <workItem from="1754985805388" duration="6605000" />
+      <workItem from="1755064961186" duration="797000" />
+      <workItem from="1755065803778" duration="13408000" />
+      <workItem from="1755085457924" duration="791000" />
+      <workItem from="1755103280215" duration="5316000" />
+      <workItem from="1755146450526" duration="4642000" />
+      <workItem from="1755153417243" duration="29298000" />
+      <workItem from="1755238159856" duration="3379000" />
+      <workItem from="1755241555414" duration="3916000" />
+      <workItem from="1755358530328" duration="211000" />
+      <workItem from="1755368485180" duration="94000" />
     </task>
     <servers />
   </component>

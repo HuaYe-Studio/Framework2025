@@ -20,6 +20,10 @@ namespace EventSystem.Core
             new Dictionary<IEventRegister, List<Type>>();
         
         
+        /// <summary>
+        /// 注册事件处理程序
+        /// </summary>
+        /// <param name="eventRegister">传入的事件注册对象，一般为this即可</param>
         public static void Register(IEventRegister eventRegister)
         {
             
@@ -76,6 +80,10 @@ namespace EventSystem.Core
             }
         }
 
+        /// <summary>
+        /// 注销事件处理程序
+        /// </summary>
+        /// <param name="eventRegister">传入的事件注销对象，一般为this即可</param>
         public static void UnRegister(IEventRegister eventRegister)
         {
             if (RegisterMap.TryGetValue(eventRegister, out var eventTypes))
@@ -99,6 +107,11 @@ namespace EventSystem.Core
             }
         }
 
+        /// <summary>
+        /// 触发事件
+        /// </summary>
+        /// <param name="eventData">触发的自定义事件结构体</param>
+        /// <typeparam name="TEvent"></typeparam>
         public static void Trigger<TEvent>(TEvent eventData) where TEvent : struct, IEvent
         {
             Type eventType = typeof(TEvent);
