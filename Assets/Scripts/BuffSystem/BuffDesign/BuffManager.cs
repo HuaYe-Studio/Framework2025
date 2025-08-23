@@ -8,6 +8,7 @@ namespace BuffSystem.BuffDesign
     public sealed class BuffManager : MonoBehaviour, IBuffManager
     {
         private readonly List<BuffRunTimeInfo> _buffRunTimeInfos = new();
+        
         //缓冲区，解决Buff的OnTick生效创建新Buff导致迭代器失效的问题
         private readonly Queue<BuffRunTimeInfo> _buff2Add = new();
 

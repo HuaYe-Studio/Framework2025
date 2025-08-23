@@ -11,10 +11,10 @@ namespace BuffSystem.BuffConstant
             public const string ON_REDUCE_STACK = "OnReduceStack";
 
             // TODO：业务相关的回调时机可以在这里补充
-            // public const string ON_KILL = "OnKill";
-            // public const string ON_BE_KILL = "OnBeKill";
-            // public const string ON_HIT = "OnHit";
-            // public const string ON_BE_HIT = "OnBeHit";
+            public const string ON_KILL = "OnKill";
+            public const string ON_BE_KILL = "OnBeKill"; 
+            public const string ON_HIT = "OnHit";
+            public const string ON_BE_HIT = "OnBeHit";
         }
         
         public static class BuffName
