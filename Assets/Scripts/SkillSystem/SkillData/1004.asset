@@ -29,7 +29,7 @@ MonoBehaviour:
     SkillManaCost: 100
     SkillShakeBeforeTimeMS: 100
     SkillDurationMS: 2733
-    SkillShakeAfterTimeMS: 1500
+    SkillShakeAfterTimeMS: 600
     SkillCooldownMS: 0
     SkillType: 0
     StockPileStageData: []
@@ -37,7 +37,7 @@ MonoBehaviour:
     SkillGuideRange: 0
     NextSkillId: 0
     SkillHitEffect: {fileID: 0}
-    SkillHitEffectDurationMS: 0
+    SkillHitEffectDuration: 0
     SkillHitSound: {fileID: 0}
     ShowSkillPortrait: 0
     SkillPortrait: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
     TriggerIntervalMs: 0
     FollowEffect: 0
     DamageType: 0
+    DamageValue: 0
     DamageRate: 0
     BoxSize: {x: 5, y: 1.5, z: 5}
     BoxOffset: {x: 0, y: 0.75, z: 0}

@@ -83,7 +83,7 @@ namespace SkillSystem.Character
             
         }
         
-        public void OnReleaseSkill(int skillID)
+        public virtual void OnReleaseSkill(int skillID)
         {
             Skill skill =  _skillSystem.ReleaseSkill(skillID,OnSkillReleaseAfter,OnSkillReleaseEnd);
             if (skill != null)
@@ -96,7 +96,7 @@ namespace SkillSystem.Character
             }
         }
         
-        public void OnSkillReleaseAfter(Skill skill)
+        public virtual void OnSkillReleaseAfter(Skill skill)
         {
             if (IsNormalSkillRelease(skill._skillID))
             {
@@ -110,7 +110,7 @@ namespace SkillSystem.Character
             }
         }
 
-        public void OnSkillReleaseEnd(Skill skill)
+        public virtual void OnSkillReleaseEnd(Skill skill)
         {
             ReleaseSkills.Remove(skill);
             if (ReleaseSkills.Count == 0)

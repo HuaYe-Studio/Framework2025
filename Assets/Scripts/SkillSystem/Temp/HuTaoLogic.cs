@@ -2,6 +2,7 @@
 using SkillSystem.Attack;
 using SkillSystem.Character;
 using SkillSystem.Config;
+using SkillSystem.Runtime;
 using UnityEngine;
 
 namespace SkillSystem.Temp
@@ -41,6 +42,19 @@ namespace SkillSystem.Temp
         {
             base.SetNormalSkill();
             _normalSkillArr = new[] { 1001, 1002, 1003, 1004, };
+        }
+
+
+        public override void OnReleaseSkill(int skillID)
+        {
+            base.OnReleaseSkill(skillID);
+            _animator.SetBool(AnimationID.CanMove , false);
+        }
+
+        public override void OnSkillReleaseAfter(Skill skill)
+        {
+            base.OnSkillReleaseAfter(skill);
+            _animator.SetBool(AnimationID.CanMove, true);
         }
     }
 }

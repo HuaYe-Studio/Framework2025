@@ -52,7 +52,9 @@ using UnityEngine;
         private void CharacterRotationControl()
         {
             
-            if(!_characterIsOnGround || _isLock) return;
+            if(!_characterIsOnGround || _isLock || _animator.AnimationAtTag("Attack")) return;
+            
+            
             
             if (_animator.GetBool(AnimationID.HasInput))
             {
@@ -161,13 +163,6 @@ using UnityEngine;
         //     _nextStepTime = (_animator.GetFloat(AnimationID.Movement) > 1.1f ? _fastFootTime : _slowFootTime);
         // }
 
-        private void OnControllerColliderHit(ControllerColliderHit hit)
-        {
-            Rigidbody rb;
-            if (hit.transform.TryGetComponent<Rigidbody>(out rb))
-            {
-                rb.AddForce(transform.forward * 20f, ForceMode.Force);
-            }
-        }
+      
     }
     
